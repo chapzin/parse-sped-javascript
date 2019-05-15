@@ -768,6 +768,358 @@ const regC470 = (line, reg0000) => {
   }
 };
 
+const regC490 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C490") {
+    return {
+      reg: ln[1],
+      cstIcms: ln[2],
+      cfop: ln[3],
+      aliqIcms: ln[4],
+      vlOpr: ln[5],
+      vlBcIcms: ln[6],
+      vlIcms: ln[7],
+      codObs: ln[8],
+      reg0000,
+    };
+  }
+};
+
+const regC495 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C495") {
+    return {
+      reg: ln[1],
+      aliqIcms: ln[2],
+      codItem: ln[3],
+      qtd: ln[4],
+      qtdCanc: ln[5],
+      unid: ln[6],
+      vlItem: ln[7],
+      vlDesc: ln[8],
+      vlCanc: ln[9],
+      vlAcmo: ln[10],
+      vlBcIcms: ln[11],
+      vlIcms: ln[12],
+      vlIsen: ln[13],
+      vlNt: ln[14],
+      vlIcmsSt: ln[15],
+      reg0000,
+    };
+  }
+};
+
+const regC500 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C500") {
+    return {
+      reg: ln[1],
+      indOper: ln[2],
+      indEmit: ln[3],
+      codPart: ln[4],
+      codMod: ln[5],
+      codSit: ln[6],
+      ser: ln[7],
+      sub: ln[8],
+      codCons: ln[9],
+      numDoc: ln[10],
+      dtDoc: ln[11],
+      dtES: ln[12],
+      vlDoc: ln[13],
+      vlDesc: ln[14],
+      vlForn: ln[15],
+      vlServNt: ln[16],
+      vlTerc: ln[17],
+      vlDa: ln[18],
+      vlBcIcms: ln[19],
+      vlIcms: ln[20],
+      vlBcIcmsSt: ln[21],
+      vlIcmsSt: ln[22],
+      codInf: ln[23],
+      vlPis: ln[24],
+      vlCofins: ln[25],
+      TpLigacao: ln[26],
+      codGrupoTensao: ln[27],
+      reg0000,
+    };
+  }
+};
+
+const regC510 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C510") {
+    return {
+      reg: ln[1],
+      numItem: ln[2],
+      codItem: ln[3],
+      codClass: ln[4],
+      qtd: ln[5],
+      unid: ln[6],
+      vlItem: ln[7],
+      vlDesc: ln[8],
+      cstIcms: ln[9],
+      cfop: ln[10],
+      vlBcIcms: ln[11],
+      aliqIcms: ln[12],
+      vlIcms: ln[13],
+      vlBcIcmsSt: ln[14],
+      aliqSt: ln[15],
+      vlIcmsSt: ln[16],
+      indRec: ln[17],
+      codPart: ln[18],
+      vlPis: ln[19],
+      vlCofins: ln[20],
+      codCta: ln[21],
+      reg0000,
+    };
+  }
+};
+
+const regC590 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C590") {
+    return {
+      reg: ln[1],
+      cstIcms: ln[2],
+      cfop: ln[3],
+      aliqIcms: ln[4],
+      vlOpr: ln[5],
+      vlBcIcms: ln[6],
+      vlIcms: ln[7],
+      vlBcIcmsSt: ln[8],
+      vlIcmsSt: ln[9],
+      vlRedBc: ln[10],
+      codObs: ln[11],
+      reg0000,
+    };
+  }
+};
+
+const regC600 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C600") {
+    return {
+      reg: ln[1],
+      codMod: ln[2],
+      codMun: ln[3],
+      ser: ln[4],
+      sub: ln[5],
+      codCons: ln[6],
+      qtdCons: ln[7],
+      qtdCanc: ln[8],
+      dtDoc: ln[9],
+      vlDoc: ln[10],
+      vlDesc: ln[11],
+      cons: ln[12],
+      vlForn: ln[13],
+      vlServNt: ln[14],
+      vlTerc: ln[15],
+      vlDa: ln[16],
+      vlBcIcms: ln[17],
+      vlIcms: ln[18],
+      vlBcIcmsSt: ln[19],
+      vlIcmsSt: ln[20],
+      vlPis: ln[21],
+      vlCofins: ln[22],
+      reg0000,
+    };
+  }
+};
+
+const regC601 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C601") {
+    return {
+      reg: ln[1],
+      numDocCanc: ln[2],
+      reg0000,
+    };
+  }
+};
+
+const regC610 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C610") {
+    return {
+      reg: ln[1],
+      codClass: ln[2],
+      codItem: ln[3],
+      qtd: ln[4],
+      unid: ln[5],
+      vlItem: ln[6],
+      vlDesc: ln[7],
+      cstIcms: ln[8],
+      cfop: ln[9],
+      aliqIcms: ln[10],
+      vlBcIcms: ln[11],
+      vlIcms: ln[12],
+      vlBcIcmsSt: ln[13],
+      vlIcmsSt: ln[14],
+      vlPis: ln[15],
+      vlCofins: ln[16],
+      codCta: ln[17],
+      reg0000,
+    };
+  }
+};
+
+const regC690 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C690") {
+    return {
+      reg: ln[1],
+      cstIcms: ln[2],
+      cfop: ln[3],
+      aliqIcms: ln[4],
+      vlOpr: ln[5],
+      vlBcIcms: ln[6],
+      vlIcms: ln[7],
+      vlRedBc: ln[8],
+      vlBcIcmsSt: ln[9],
+      vlIcmsSt: ln[10],
+      codObs: ln[11],
+      reg0000,
+    };
+  }
+};
+
+const regC700 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C700") {
+    return {
+      reg: ln[1],
+      codMod: ln[2],
+      ser: ln[3],
+      nroOrdIni: ln[4],
+      nroOrdFin: ln[5],
+      dtDocIni: ln[6],
+      dtDocFin: ln[7],
+      nomMest: ln[8],
+      chvCodDig: ln[9],
+      reg0000,
+    };
+  }
+};
+
+const regC790 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C790") {
+    return {
+      reg: ln[1],
+      cstIcms: ln[2],
+      cfop: ln[3],
+      aliqIcms: ln[4],
+      vlOpr: ln[5],
+      vlBcIcms: ln[6],
+      vlIcms: ln[7],
+      vlBcIcmsSt: ln[8],
+      vlIcmsSt: ln[9],
+      VlRedBc: ln[10],
+      codObs: ln[11],
+      reg0000,
+    };
+  }
+};
+
+const regC791 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C791") {
+    return {
+      reg: ln[1],
+      uf: ln[2],
+      vlBcIcmsSt: ln[3],
+      vlIcmsSt: ln[4],
+      reg0000,
+    };
+  }
+};
+
+const regC800 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C800") {
+    return {
+      reg: ln[1],
+      codMod: ln[2],
+      codSit: ln[3],
+      numCfe: ln[4],
+      dtDoc: ln[5],
+      vlCfe: ln[6],
+      vlPis: ln[7],
+      vlCofins: ln[8],
+      cnpjCpf: ln[9],
+      nrSat: ln[10],
+      chvCfe: ln[11],
+      vlDesc: ln[12],
+      vlMerc: ln[13],
+      vlOutDa: ln[14],
+      vlIcms: ln[15],
+      vlPisSt: ln[16],
+      vlCofinsSt: ln[17],
+      reg0000,
+    };
+  }
+};
+
+const regC850 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C850") {
+    return {
+      reg: ln[1],
+      cstIcms: ln[2],
+      cfop: ln[3],
+      aliqIcms: ln[4],
+      vlOpr: ln[5],
+      vlBcIcms: ln[6],
+      vlIcms: ln[7],
+      codObs: ln[8],
+      reg0000,
+    };
+  }
+};
+
+const regC860 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C860") {
+    return {
+      reg: ln[1],
+      codMod: ln[2],
+      nrSat: ln[3],
+      dtDoc: ln[4],
+      docIni: ln[5],
+      docFim: ln[6],
+      reg0000,
+    };
+  }
+};
+
+const regC890 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C890") {
+    return {
+      reg: ln[1],
+      cstIcms: ln[2],
+      cfop: ln[3],
+      aliqIcms: ln[4],
+      vlOpr: ln[5],
+      vlBcIcms: ln[6],
+      vlIcms: ln[7],
+      codObs: ln[8],
+      reg0000,
+    };
+  }
+};
+
+const regC990 = (line, reg0000) => {
+  const ln = line.split("|");
+  if (line[0] == "|" && ln[1] == "C990") {
+    return {
+      reg: ln[1],
+      qtdLinC: ln[2],
+      reg0000,
+    };
+  }
+};
+
 module.exports = {
   regC001,
   regC100,
@@ -814,4 +1166,21 @@ module.exports = {
   regC460,
   regC465,
   regC470,
+  regC490,
+  regC495,
+  regC500,
+  regC510,
+  regC590,
+  regC600,
+  regC601,
+  regC610,
+  regC690,
+  regC700,
+  regC790,
+  regC791,
+  regC800,
+  regC850,
+  regC860,
+  regC890,
+  regC990,
 };
