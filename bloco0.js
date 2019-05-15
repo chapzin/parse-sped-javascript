@@ -1,7 +1,7 @@
 const reg0000 = line => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0000") {
-    console.log({
+    return {
       reg: ln[1],
       codVer: ln[2],
       codFin: ln[3],
@@ -17,11 +17,11 @@ const reg0000 = line => {
       suframa: ln[13],
       indPerfil: ln[14],
       indAtiv: ln[15],
-    });
+    };
   }
 };
 
-const reg0005 = line => {
+const reg0005 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0005") {
     console.log({
@@ -35,22 +35,24 @@ const reg0005 = line => {
       fone: ln[8],
       fax: ln[9],
       email: ln[10],
+      reg0000,
     });
   }
 };
 
-const reg0015 = line => {
+const reg0015 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0015") {
     console.log({
       reg: ln[1],
       ufSt: ln[2],
       ieSt: ln[3],
+      reg0000,
     });
   }
 };
 
-const reg0100 = line => {
+const reg0100 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0100") {
     console.log({
@@ -68,11 +70,12 @@ const reg0100 = line => {
       fax: ln[12],
       email: ln[13],
       codMun: ln[14],
+      reg0000,
     });
   }
 };
 
-const reg0150 = line => {
+const reg0150 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0150") {
     console.log({
@@ -89,11 +92,12 @@ const reg0150 = line => {
       num: ln[11],
       compl: ln[12],
       bairro: ln[13],
+      reg0000,
     });
   }
 };
 
-const reg0175 = line => {
+const reg0175 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0175") {
     console.log({
@@ -101,25 +105,27 @@ const reg0175 = line => {
       dtAlt: ln[2],
       nrCampo: ln[3],
       contAnt: ln[4],
+      reg0000,
     });
   }
 };
 
-const reg0190 = line => {
+const reg0190 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0190") {
     console.log({
       reg: ln[1],
       unid: ln[2],
       descr: ln[3],
+      reg0000,
     });
   }
 };
 
-const reg0200 = line => {
+const reg0200 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0200") {
-    console.log({
+    return {
       reg: ln[1],
       codItem: ln[2],
       descrItem: ln[3],
@@ -133,11 +139,13 @@ const reg0200 = line => {
       codLst: ln[11],
       aliqIcms: ln[12],
       cest: ln[13],
-    });
+      reg0220: [],
+      reg0000,
+    };
   }
 };
 
-const reg0205 = line => {
+const reg0205 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0205") {
     console.log({
@@ -146,32 +154,36 @@ const reg0205 = line => {
       dtIni: ln[3],
       dtFim: ln[4],
       codAntItem: ln[5],
+      reg0000,
     });
   }
 };
 
-const reg0206 = line => {
+const reg0206 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0206") {
     console.log({
       reg: ln[1],
       codComb: ln[2],
+      reg0000,
     });
   }
 };
 
-const reg0220 = line => {
+const reg0220 = (line, reg0200, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0220") {
-    console.log({
+    return {
       reg: ln[1],
       unidConv: ln[2],
       fatConv: ln[3],
-    });
+      codItem: reg0200.codItem,
+      reg0000,
+    };
   }
 };
 
-const reg0300 = line => {
+const reg0300 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0300") {
     console.log({
@@ -181,11 +193,12 @@ const reg0300 = line => {
       codPrnc: ln[4],
       codCta: ln[5],
       nrParc: ln[6],
+      reg0000,
     });
   }
 };
 
-const reg0305 = line => {
+const reg0305 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0305") {
     console.log({
@@ -197,40 +210,43 @@ const reg0305 = line => {
   }
 };
 
-const reg0400 = line => {
+const reg0400 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0400") {
     console.log({
       reg: ln[1],
       codNat: ln[2],
       descrNat: ln[3],
+      reg0000,
     });
   }
 };
 
-const reg0450 = line => {
+const reg0450 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0450") {
     console.log({
       reg: ln[1],
       codInf: ln[2],
       txt: ln[3],
+      reg0000,
     });
   }
 };
 
-const reg0460 = line => {
+const reg0460 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0460") {
     console.log({
       reg: ln[1],
       codObs: ln[2],
       txt: ln[3],
+      reg0000,
     });
   }
 };
 
-const reg0500 = line => {
+const reg0500 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0500") {
     console.log({
@@ -241,11 +257,12 @@ const reg0500 = line => {
       nivel: ln[5],
       codCta: ln[6],
       nomeCta: ln[7],
+      reg0000,
     });
   }
 };
 
-const reg0600 = line => {
+const reg0600 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0600") {
     console.log({
@@ -253,16 +270,18 @@ const reg0600 = line => {
       dtAlt: ln[2],
       codCcus: ln[3],
       ccus: ln[4],
+      reg0000,
     });
   }
 };
 
-const reg0990 = line => {
+const reg0990 = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "0990") {
     console.log({
       reg: ln[1],
       qtdLin: ln[2],
+      reg0000,
     });
   }
 };
