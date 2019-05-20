@@ -10,3 +10,4 @@
 *.fs_log
 *.fs
 *.fs_old
+node_modules

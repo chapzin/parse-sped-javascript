@@ -1,6 +1,12 @@
 {
-  "name": "Inventario 2016 Companny",
+  "name": "parse-sped",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.0"
+  }
 }
