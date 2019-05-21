@@ -8,6 +8,7 @@ const Reg0100Model = require('../app/models/Reg0100')
 const Reg0150Model = require('../app/models/Reg0150')
 const Reg0190Model = require('../app/models/Reg0190')
 const Reg0200Model = require('../app/models/Reg0200')
+const Reg0220Model = require('../app/models/Reg0220')
 
 const { mongodb } = require('../config/database')
 
@@ -16,7 +17,7 @@ const lineReader = (file) => {
     input: fs.createReadStream(file),
   })
 }
-let regInicial = {}
+let r0000 = {}
 let reg0200p = {}
 const sped = lineReader(path.resolve('uploads', 'sped.txt'))
 const database = (uri) => {
@@ -29,73 +30,73 @@ database(mongodb.uri)
 
 sped.on('line', (line) => {
   if (reg0000(line)) {
-    regInicial = reg0000(line)
-    Reg0000Model.create(regInicial, (err, result) => {
+    r0000 = reg0000(line)
+    Reg0000Model.create(r0000, (err, result) => {
       if (err) {
         console.log(err)
       } else {
-        // console.log(result)
-      }
-    })
-
-    // console.log(add)
-  }
-
-  if (reg0005(line, regInicial)) {
-    const reg0005p = reg0005(line, regInicial)
-    Reg0005Model.create(reg0005p, (err, result) => {
-      if (err) {
-        console.log(err)
-      } else {
-        console.log(result)
+        console.log('Adicionado reg0000')
       }
     })
   }
 
-  if (reg0100(line, regInicial)) {
-    Reg0100Model.create(reg0100(line, regInicial), (err, result) => {
+  if (reg0005(line, r0000)) {
+    Reg0005Model.create(reg0005(line, r0000), (err, result) => {
       if (err) {
         console.log(err)
       } else {
-        // console.log(result)
+        console.log('Adicionado reg0005')
       }
     })
   }
 
-  if (reg0150(line, regInicial)) {
-    Reg0150Model.create(reg0150(line, regInicial), (err, result) => {
+  if (reg0100(line, r0000)) {
+    Reg0100Model.create(reg0100(line, r0000), (err, result) => {
       if (err) {
         console.log(err)
       } else {
-        // console.log(result)
+        console.log('Adicionado reg0100')
       }
     })
   }
 
-  if (reg0190(line, regInicial)) {
-    Reg0190Model.create(reg0190(line, regInicial), (err, result) => {
+  if (reg0150(line, r0000)) {
+    Reg0150Model.create(reg0150(line, r0000), (err, result) => {
       if (err) {
         console.log(err)
       } else {
-        // console.log(result)
+        // console.log('Adicionado reg0150')
       }
     })
   }
-  if (reg0200(line, regInicial)) {
-    reg0200p = reg0200(line, regInicial)
-    Reg0200Model.create(reg0200p, (err, result) => {
+
+  if (reg0190(line, r0000)) {
+    Reg0190Model.create(reg0190(line, r0000), (err, result) => {
       if (err) {
         console.log(err)
       } else {
-        // console.log(result)
+        console.log('Adicionado reg0190')
       }
     })
   }
-  // if (reg0220(line, reg0200p, regInicial)) {
-  // console.log(reg0220(line, reg0200p, regInicial))
-  // }
-  // reg0005(line, regInicial)
-  // reg0990(line, regInicial)
-  // reg0200(line);
-  // reg0220(line);
+  if (reg0200(line, r0000)) {
+    reg0200p = reg0200(line, r0000)
+    Reg0200Model.create(reg0200(line, r0000), (err, result) => {
+      if (err) {
+        console.log(err)
+      } else {
+        // console.log('Adicionado reg0200')
+      }
+    })
+  }
+
+  if (reg0220(line, reg0200p, r0000)) {
+    Reg0220Model.create(reg0220(line, reg0200p, r0000), (err, result) => {
+      if (err) {
+        console.log(err)
+      } else {
+        console.log('Adicionado reg0220')
+      }
+    })
+  }
 })
