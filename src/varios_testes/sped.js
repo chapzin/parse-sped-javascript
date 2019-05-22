@@ -1,5 +1,7 @@
 const fs = require('fs')
 const { reg0000, reg0005, reg0100, reg0150, reg0190, reg0200, reg0220, reg0990 } = require('../app/blocos/bloco0')
+const { regC100 } = require('../app/blocos/blocoC')
+const { reg9999 } = require('../app/blocos/bloco9')
 const path = require('path')
 const mongoose = require('mongoose')
 const Reg0000Model = require('../app/models/Reg0000')
@@ -9,6 +11,7 @@ const Reg0150Model = require('../app/models/Reg0150')
 const Reg0190Model = require('../app/models/Reg0190')
 const Reg0200Model = require('../app/models/Reg0200')
 const Reg0220Model = require('../app/models/Reg0220')
+const RegC100Model = require('../app/models/RegC100')
 
 const { mongodb } = require('../config/database')
 
@@ -35,7 +38,7 @@ sped.on('line', (line) => {
       if (err) {
         console.log(err)
       } else {
-        console.log('Adicionado reg0000')
+        // console.log('Adicionado reg0000')
       }
     })
   }
@@ -45,7 +48,7 @@ sped.on('line', (line) => {
       if (err) {
         console.log(err)
       } else {
-        console.log('Adicionado reg0005')
+        // console.log('Adicionado reg0005')
       }
     })
   }
@@ -55,7 +58,7 @@ sped.on('line', (line) => {
       if (err) {
         console.log(err)
       } else {
-        console.log('Adicionado reg0100')
+        // console.log('Adicionado reg0100')
       }
     })
   }
@@ -75,7 +78,7 @@ sped.on('line', (line) => {
       if (err) {
         console.log(err)
       } else {
-        console.log('Adicionado reg0190')
+        // console.log('Adicionado reg0190')
       }
     })
   }
@@ -95,8 +98,23 @@ sped.on('line', (line) => {
       if (err) {
         console.log(err)
       } else {
-        console.log('Adicionado reg0220')
+        // console.log('Adicionado reg0220')
       }
     })
+  }
+
+  if (regC100(line, r0000)) {
+    // console.log(regC100(line, r0000))
+    RegC100Model.create(regC100(line, r0000), (err, result) => {
+      if (err) {
+        console.log(err)
+      } else {
+        // console.log('Adicionado regC100')
+      }
+    })
+  }
+  if (reg9999(line, r0000)) {
+    console.log('-=-=-=-=- FIM DO ARQUIVO SPED -=-=-=-=-=-=-')
+    // break;
   }
 })
