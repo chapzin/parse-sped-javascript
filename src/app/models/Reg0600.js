@@ -5,32 +5,22 @@ const RegSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  codIndBem: {
+  dtAlt: {
     type: String,
     required: true,
   },
-  identMerc: {
+  codCcus: {
     type: String,
     required: true,
   },
-  descrItem: {
+  ccus: {
     type: String,
     required: true,
-  },
-  codPrnc: {
-    type: String,
-  },
-  codCta: {
-    type: String,
-    required: true,
-  },
-  nrParc: {
-    type: String,
   },
   reg0000: {
-    type: String,
+    type: Object,
     required: true,
   },
 })
 
-module.exports = mongoose.model('reg0300', RegSchema)
+module.exports = mongoose.model('reg0600', RegSchema)
