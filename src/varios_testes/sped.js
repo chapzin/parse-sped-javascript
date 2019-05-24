@@ -34,6 +34,7 @@ database(mongodb.uri)
 sped.on('line', (line) => {
   if (reg0000(line)) {
     r0000 = reg0000(line)
+    console.log(r0000)
     Reg0000Model.create(r0000, (err, result) => {
       if (err) {
         console.log(err)
@@ -116,7 +117,7 @@ sped.on('line', (line) => {
   if (reg9999(line, r0000)) {
     console.log('-=-=-=-=- FIM DO ARQUIVO SPED -=-=-=-=-=-=-')
     const timeEnd = Date.now()
-    console.log(`Duração da importação ${(timeEnd - timeStart) / 60} segundos...`)
+    console.log(`Duração da importação ${((timeEnd - timeStart) / 1000).toFixed(2)} segundos...`)
     // break;
   }
 })
