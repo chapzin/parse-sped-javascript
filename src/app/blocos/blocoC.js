@@ -1,17 +1,17 @@
 const regC001 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C001") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C001') {
     return {
       reg: ln[1],
       indMov: ln[2],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC100 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C100") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C100') {
     return {
       reg: ln[1],
       indOper: ln[2],
@@ -43,62 +43,62 @@ const regC100 = (line, reg0000) => {
       vlPisSt: ln[28],
       vlCofinsSt: ln[29],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC101 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C101") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C101') {
     return {
       reg: ln[1],
       vlFcpUfDest: ln[2],
       vlIcmsUfDest: ln[3],
       vlIcmsUfRem: ln[4],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC105 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C105") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C105') {
     return {
       reg: ln[1],
       oper: ln[2],
       uf: ln[3],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC110 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C110") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C110') {
     return {
       reg: ln[1],
       codInf: ln[2],
       txtCompl: ln[3],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC111 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C111") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C111') {
     return {
       reg: ln[1],
       numProc: ln[2],
       indProc: ln[3],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC112 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C112") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C112') {
     return {
       reg: ln[1],
       codDa: ln[2],
@@ -109,13 +109,13 @@ const regC112 = (line, reg0000) => {
       dtVcto: ln[7],
       dtPgto: ln[8],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC113 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C113") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C113') {
     return {
       reg: ln[1],
       indOper: ln[2],
@@ -128,13 +128,13 @@ const regC113 = (line, reg0000) => {
       dtDoc: ln[9],
       chvDoce: ln[10],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC114 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C114") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C114') {
     return {
       reg: ln[1],
       codMod: ln[2],
@@ -143,13 +143,13 @@ const regC114 = (line, reg0000) => {
       numDoc: ln[5],
       dtDoc: ln[6],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC115 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C115") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C115') {
     return {
       reg: ln[1],
       indCarga: ln[2],
@@ -162,13 +162,13 @@ const regC115 = (line, reg0000) => {
       cpfEntg: ln[9],
       codMunEntg: ln[10],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC116 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C116") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C116') {
     return {
       reg: ln[1],
       codMod: ln[2],
@@ -177,13 +177,13 @@ const regC116 = (line, reg0000) => {
       numCfe: ln[5],
       dtDoc: ln[6],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC120 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C120") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C120') {
     return {
       reg: ln[1],
       codDocImp: ln[2],
@@ -192,13 +192,13 @@ const regC120 = (line, reg0000) => {
       cofinsImp: ln[5],
       numAcdraw: ln[6],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC130 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C130") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C130') {
     return {
       reg: ln[1],
       vlServNt: ln[2],
@@ -209,13 +209,13 @@ const regC130 = (line, reg0000) => {
       vlBcPrev: ln[7],
       vlPrev: ln[8],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC140 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C140") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C140') {
     return {
       reg: ln[1],
       indEmit: ln[2],
@@ -225,26 +225,26 @@ const regC140 = (line, reg0000) => {
       qtdParc: ln[6],
       vlTit: ln[7],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC141 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C141") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C141') {
     return {
       reg: ln[1],
       numParc: ln[2],
       dtVcto: ln[3],
       vlParc: ln[4],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC160 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C160") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C160') {
     return {
       reg: ln[1],
       codPart: ln[2],
@@ -254,13 +254,13 @@ const regC160 = (line, reg0000) => {
       pesoLiq: ln[6],
       ufId: ln[7],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC165 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C165") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C165') {
     return {
       reg: ln[1],
       codPart: ln[2],
@@ -276,13 +276,13 @@ const regC165 = (line, reg0000) => {
       cpf: ln[12],
       ufId: ln[13],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC170 = (line, regC100, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C170") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C170') {
     return {
       reg: ln[1],
       numItem: ln[2],
@@ -312,49 +312,49 @@ const regC170 = (line, regC100, reg0000) => {
       vlBcPis: ln[26],
       aliqPis: ln[27],
       quantBcPis: ln[28],
-      aliqPis: ln[29],
+      aliqPis2: ln[29],
       vlPis: ln[30],
       cstCofins: ln[31],
       vlBcCofins: ln[32],
       aliqCofins: ln[33],
       quantBcCofins: ln[34],
-      aliqCofins: ln[35],
+      aliqCofins2: ln[35],
       vlCofins: ln[36],
       codCta: ln[37],
       chaveNfe: regC100.chaveNfe,
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC171 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C171") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C171') {
     return {
       reg: ln[1],
       numTanque: ln[2],
       qtde: ln[3],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC172 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C172") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C172') {
     return {
       reg: ln[1],
       vlBcIssqn: ln[2],
       aliqIssqn: ln[3],
       vlIssqn: ln[4],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC173 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C173") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C173') {
     return {
       reg: ln[1],
       loteMed: ln[2],
@@ -365,26 +365,26 @@ const regC173 = (line, reg0000) => {
       tpProd: ln[7],
       vlTabMax: ln[8],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC174 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C174") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C174') {
     return {
       reg: ln[1],
       indArm: ln[2],
       numArm: ln[3],
       descrCompl: ln[4],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC175 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C175") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C175') {
     return {
       reg: ln[1],
       indVeicOper: ln[2],
@@ -392,13 +392,13 @@ const regC175 = (line, reg0000) => {
       uf: ln[4],
       chassiVeic: ln[5],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC176 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C176") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C176') {
     return {
       reg: ln[1],
       codModUltE: ln[2],
@@ -427,38 +427,38 @@ const regC176 = (line, reg0000) => {
       codDa: ln[25],
       numDa: ln[26],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC177 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C177") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C177') {
     return {
       reg: ln[1],
       codSeloIpi: ln[2],
       qtSeloIpi: ln[3],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC178 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C178") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C178') {
     return {
       reg: ln[1],
       clEnq: ln[2],
       vlUnid: ln[3],
       quantPad: ln[4],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC179 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C179") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C179') {
     return {
       reg: ln[1],
       BcStOrigDest: ln[2],
@@ -467,13 +467,13 @@ const regC179 = (line, reg0000) => {
       bcRet: ln[5],
       icmsRet: ln[6],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC190 = (line, regC100, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C190") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C190') {
     return {
       reg: ln[1],
       cstIcms: ln[2],
@@ -489,25 +489,25 @@ const regC190 = (line, regC100, reg0000) => {
       codObs: ln[12],
       chvNfe: regC100.chaveNfe,
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC195 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C195") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C195') {
     return {
       reg: ln[1],
       codObs: ln[2],
       txtCompl: ln[3],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC197 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C197") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C197') {
     return {
       reg: ln[1],
       codAj: ln[2],
@@ -518,13 +518,13 @@ const regC197 = (line, reg0000) => {
       vlIcms: ln[7],
       vlOutros: ln[8],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC300 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C300") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C300') {
     return {
       reg: ln[1],
       codMod: ln[2],
@@ -538,24 +538,24 @@ const regC300 = (line, reg0000) => {
       vlCofins: ln[10],
       codCta: ln[11],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC310 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C310") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C310') {
     return {
       reg: ln[1],
       numDocCanc: ln[2],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC320 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C320") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C320') {
     return {
       reg: ln[1],
       cstIcms: ln[2],
@@ -567,13 +567,13 @@ const regC320 = (line, reg0000) => {
       vlRedBc: ln[8],
       codObs: ln[9],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC321 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C321") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C321') {
     return {
       reg: ln[1],
       codItem: ln[2],
@@ -586,13 +586,13 @@ const regC321 = (line, reg0000) => {
       vlPis: ln[9],
       vlCofins: ln[10],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC350 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C350") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C350') {
     return {
       reg: ln[1],
       ser: ln[2],
@@ -607,13 +607,13 @@ const regC350 = (line, reg0000) => {
       vlCofins: ln[11],
       codCta: ln[12],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC370 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C370") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C370') {
     return {
       reg: ln[1],
       numItem: ln[2],
@@ -623,13 +623,13 @@ const regC370 = (line, reg0000) => {
       vlItem: ln[6],
       vlDesc: ln[7],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC390 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C390") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C390') {
     return {
       reg: ln[1],
       cstIcms: ln[2],
@@ -641,13 +641,13 @@ const regC390 = (line, reg0000) => {
       vlRedBc: ln[8],
       codObs: ln[9],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC400 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C400") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C400') {
     return {
       reg: ln[1],
       codMod: ln[2],
@@ -655,13 +655,13 @@ const regC400 = (line, reg0000) => {
       ecfFab: ln[4],
       ecfCx: ln[5],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC405 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C405") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C405') {
     return {
       reg: ln[1],
       dtDoc: ln[2],
@@ -671,25 +671,25 @@ const regC405 = (line, reg0000) => {
       gtFin: ln[6],
       vlBrt: ln[7],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC410 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C410") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C410') {
     return {
       reg: ln[1],
       vlPis: ln[2],
       vlCofins: ln[3],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC420 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C420") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C420') {
     return {
       reg: ln[1],
       codTotPar: ln[2],
@@ -697,13 +697,13 @@ const regC420 = (line, reg0000) => {
       nrTot: ln[4],
       descrNrTot: ln[5],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC425 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C425") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C425') {
     return {
       reg: ln[1],
       codItem: ln[2],
@@ -713,13 +713,13 @@ const regC425 = (line, reg0000) => {
       vlPis: ln[6],
       vlCofins: ln[7],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC460 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C460") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C460') {
     return {
       reg: ln[1],
       codMod: ln[2],
@@ -732,25 +732,25 @@ const regC460 = (line, reg0000) => {
       cpfCnpj: ln[9],
       nomAdq: ln[10],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC465 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C465") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C465') {
     return {
       reg: ln[1],
       chvNfe: ln[2],
       numCcf: ln[3],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC470 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C470") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C470') {
     return {
       reg: ln[1],
       codItem: ln[2],
@@ -764,13 +764,13 @@ const regC470 = (line, reg0000) => {
       vlPis: ln[10],
       vlCofins: ln[11],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC490 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C490") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C490') {
     return {
       reg: ln[1],
       cstIcms: ln[2],
@@ -781,13 +781,13 @@ const regC490 = (line, reg0000) => {
       vlIcms: ln[7],
       codObs: ln[8],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC495 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C495") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C495') {
     return {
       reg: ln[1],
       aliqIcms: ln[2],
@@ -805,13 +805,13 @@ const regC495 = (line, reg0000) => {
       vlNt: ln[14],
       vlIcmsSt: ln[15],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC500 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C500") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C500') {
     return {
       reg: ln[1],
       indOper: ln[2],
@@ -841,13 +841,13 @@ const regC500 = (line, reg0000) => {
       TpLigacao: ln[26],
       codGrupoTensao: ln[27],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC510 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C510") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C510') {
     return {
       reg: ln[1],
       numItem: ln[2],
@@ -871,13 +871,13 @@ const regC510 = (line, reg0000) => {
       vlCofins: ln[20],
       codCta: ln[21],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC590 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C590") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C590') {
     return {
       reg: ln[1],
       cstIcms: ln[2],
@@ -891,13 +891,13 @@ const regC590 = (line, reg0000) => {
       vlRedBc: ln[10],
       codObs: ln[11],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC600 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C600") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C600') {
     return {
       reg: ln[1],
       codMod: ln[2],
@@ -922,24 +922,24 @@ const regC600 = (line, reg0000) => {
       vlPis: ln[21],
       vlCofins: ln[22],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC601 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C601") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C601') {
     return {
       reg: ln[1],
       numDocCanc: ln[2],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC610 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C610") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C610') {
     return {
       reg: ln[1],
       codClass: ln[2],
@@ -959,13 +959,13 @@ const regC610 = (line, reg0000) => {
       vlCofins: ln[16],
       codCta: ln[17],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC690 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C690") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C690') {
     return {
       reg: ln[1],
       cstIcms: ln[2],
@@ -979,13 +979,13 @@ const regC690 = (line, reg0000) => {
       vlIcmsSt: ln[10],
       codObs: ln[11],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC700 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C700") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C700') {
     return {
       reg: ln[1],
       codMod: ln[2],
@@ -997,13 +997,13 @@ const regC700 = (line, reg0000) => {
       nomMest: ln[8],
       chvCodDig: ln[9],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC790 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C790") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C790') {
     return {
       reg: ln[1],
       cstIcms: ln[2],
@@ -1017,26 +1017,26 @@ const regC790 = (line, reg0000) => {
       VlRedBc: ln[10],
       codObs: ln[11],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC791 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C791") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C791') {
     return {
       reg: ln[1],
       uf: ln[2],
       vlBcIcmsSt: ln[3],
       vlIcmsSt: ln[4],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC800 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C800") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C800') {
     return {
       reg: ln[1],
       codMod: ln[2],
@@ -1056,13 +1056,13 @@ const regC800 = (line, reg0000) => {
       vlPisSt: ln[16],
       vlCofinsSt: ln[17],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC850 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C850") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C850') {
     return {
       reg: ln[1],
       cstIcms: ln[2],
@@ -1073,13 +1073,13 @@ const regC850 = (line, reg0000) => {
       vlIcms: ln[7],
       codObs: ln[8],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC860 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C860") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C860') {
     return {
       reg: ln[1],
       codMod: ln[2],
@@ -1088,13 +1088,13 @@ const regC860 = (line, reg0000) => {
       docIni: ln[5],
       docFim: ln[6],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC890 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C890") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C890') {
     return {
       reg: ln[1],
       cstIcms: ln[2],
@@ -1105,20 +1105,20 @@ const regC890 = (line, reg0000) => {
       vlIcms: ln[7],
       codObs: ln[8],
       reg0000,
-    };
+    }
   }
-};
+}
 
 const regC990 = (line, reg0000) => {
-  const ln = line.split("|");
-  if (line[0] == "|" && ln[1] == "C990") {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'C990') {
     return {
       reg: ln[1],
       qtdLinC: ln[2],
       reg0000,
-    };
+    }
   }
-};
+}
 
 module.exports = {
   regC001,
@@ -1183,4 +1183,4 @@ module.exports = {
   regC860,
   regC890,
   regC990,
-};
+}
