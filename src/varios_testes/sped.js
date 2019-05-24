@@ -14,7 +14,7 @@ const Reg0220Model = require('../app/models/Reg0220')
 const RegC100Model = require('../app/models/RegC100')
 
 const { mongodb } = require('../config/database')
-
+const timeStart = Date.now()
 const lineReader = (file) => {
   return require('readline').createInterface({
     input: fs.createReadStream(file),
@@ -115,6 +115,8 @@ sped.on('line', (line) => {
   }
   if (reg9999(line, r0000)) {
     console.log('-=-=-=-=- FIM DO ARQUIVO SPED -=-=-=-=-=-=-')
+    const timeEnd = Date.now()
+    console.log(`Duração da importação ${(timeEnd - timeStart) / 60} segundos...`)
     // break;
   }
 })
