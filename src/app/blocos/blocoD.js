@@ -32,6 +32,40 @@ const regD001 = (line, reg0000) => {
   }
 }
 
+const regD100 = (line, reg0000) => {
+  const ln = line.split('|')
+  if (line[0] == '|' && ln[1] == 'D100') {
+    return {
+      reg: ln[1],
+      indOper: ln[2],
+      indEmit: ln[3],
+      codPart: ln[4],
+      codMod: ln[5],
+      codSit: ln[6],
+      ser: ln[7],
+      sub: ln[8],
+      numDoc: ln[9],
+      chvCte: ln[10],
+      dtDoc: ln[11],
+      dtAP: ln[12],
+      tpCte: ln[13],
+      chvCteRef: ln[14],
+      vlDoc: ln[15],
+      vlDesc: ln[16],
+      indFrt: ln[17],
+      vlServ: ln[18],
+      vlBcIcms: ln[19],
+      vlIcms: ln[20],
+      vlNt: ln[21],
+      codInf: ln[22],
+      codCta: ln[23],
+      codMunOrig: ln[24],
+      codMunDest: ln[25],
+      reg0000,
+    }
+  }
+}
+
 const regD101 = (line, reg0000) => {
   const ln = line.split('|')
   if (line[0] == '|' && ln[1] == 'D101') {
