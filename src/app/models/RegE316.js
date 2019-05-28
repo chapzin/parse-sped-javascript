@@ -5,8 +5,21 @@ const RegSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  numDa: {
+  codOr: {
     type: String,
+    required: true,
+  },
+  vlOr: {
+    type: String,
+    required: true,
+  },
+  dtVcto: {
+    type: String,
+    required: true,
+  },
+  codRec: {
+    type: String,
+    required: true,
   },
   numProc: {
     type: String,
@@ -20,10 +33,14 @@ const RegSchema = new mongoose.Schema({
   txtCompl: {
     type: String,
   },
+  mesRef: {
+    type: String,
+    required: true,
+  },
   reg0000: {
     type: Object,
     required: true,
   },
 });
 
-module.exports = mongoose.model("regE312", RegSchema);
+module.exports = mongoose.model("regE316", RegSchema);
