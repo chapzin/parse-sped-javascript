@@ -35,4 +35,4 @@ const RegSchema = new mongoose.Schema({
   },
 })
 
-module.exports = mongoose.model('regD160', RegSchema)
+module.exports = mongoose.model('regD161', RegSchema)
