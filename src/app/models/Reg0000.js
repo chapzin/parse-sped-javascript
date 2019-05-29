@@ -14,11 +14,11 @@ const RegSchema = new mongoose.Schema({
     required: true,
   },
   dtIni: {
-    type: String,
+    type: Date,
     required: true,
   },
   dtFin: {
-    type: String,
+    type: Date,
     required: true,
   },
   nome: {

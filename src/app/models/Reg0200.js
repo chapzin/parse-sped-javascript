@@ -40,7 +40,7 @@ const RegSchema = new mongoose.Schema({
     type: String,
   },
   aliqIcms: {
-    type: String,
+    type: Number,
   },
   cest: {
     type: String,

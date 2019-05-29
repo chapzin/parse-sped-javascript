@@ -1,3 +1,5 @@
+const { convertToFloat } = require('../util/conversores')
+
 const regC001 = (line, reg0000) => {
   const ln = line.split('|')
   if (line[0] == '|' && ln[1] == 'C001') {
@@ -24,7 +26,7 @@ const regC100 = (line, reg0000) => {
       chvNfe: ln[9],
       dtDoc: ln[10],
       dtES: ln[11],
-      vlDoc: ln[12],
+      vlDoc: convertToFloat(ln[12]),
       indPgto: ln[13],
       vlDesc: ln[14],
       vlAbatNt: ln[15],

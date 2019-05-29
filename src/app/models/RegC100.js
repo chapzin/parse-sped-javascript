@@ -28,7 +28,7 @@ const RegSchema = new mongoose.Schema({
     type: String,
   },
   numDoc: {
-    type: String,
+    type: Number,
     required: true,
   },
   chvNfe: {
@@ -41,7 +41,7 @@ const RegSchema = new mongoose.Schema({
     type: String,
   },
   vlDoc: {
-    type: String,
+    type: Number,
   },
   indPgto: {
     type: String,
