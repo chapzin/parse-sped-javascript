@@ -153,8 +153,8 @@ const reg0205 = (line, reg0000) => {
     return {
       reg: ln[1],
       descrAntItem: ln[2],
-      dtIni: ln[3],
-      dtFim: ln[4],
+      dtIni: convertStringToDateSped(ln[3]),
+      dtFim: convertStringToDateSped(ln[4]),
       codAntItem: ln[5],
       reg0000,
     }
@@ -178,7 +178,7 @@ const reg0220 = (line, reg0200, reg0000) => {
     return {
       reg: ln[1],
       unidConv: ln[2],
-      fatConv: ln[3],
+      fatConv: convertToFloat(ln[3]),
       codItem: reg0200.codItem,
       reg0000,
     }
@@ -253,7 +253,7 @@ const reg0500 = (line, reg0000) => {
   if (line[0] == '|' && ln[1] == '0500') {
     return {
       reg: ln[1],
-      dtAlt: ln[2],
+      dtAlt: convertStringToDateSped(ln[2]),
       codNatCc: ln[3],
       indCta: ln[4],
       nivel: ln[5],
@@ -269,7 +269,7 @@ const reg0600 = (line, reg0000) => {
   if (line[0] == '|' && ln[1] == '0600') {
     return {
       reg: ln[1],
-      dtAlt: ln[2],
+      dtAlt: convertStringToDateSped(ln[2]),
       codCcus: ln[3],
       ccus: ln[4],
       reg0000,

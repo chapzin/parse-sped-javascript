@@ -3,7 +3,7 @@ const convertToFloat = (value) => {
     const vl2 = value.replace(',', '.')
     return parseFloat(vl2).toFixed(2)
   } else {
-    return 0
+    return ''
   }
 }
 

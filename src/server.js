@@ -2,6 +2,7 @@ const express = require('express')
 const routes = require('./routes')
 const mongoose = require('mongoose')
 const { mongodb } = require('./config/database')
+const expressGraphQl = require('express-graphql')
 
 const app = express()
 
