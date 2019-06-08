@@ -12,5 +12,6 @@ routes.get('/', (req, res) => {
 
 routes.post('/user', UserController.store)
 routes.get('/sped-test', Bloco0Controller.store)
+routes.get('/bloco0', Bloco0Controller.getAll)
 
 module.exports = routes

@@ -6,8 +6,13 @@ const lineReader = (file) => {
     input: fs.createReadStream(file),
   })
 }
-const { reg0000 } = require('../blocos/bloco0')
-const sped = lineReader(path.resolve('uploads', 'sped.txt'))
+// const { reg0000 } = require('../blocos/bloco0')
+// const sped = lineReader(path.resolve('uploads', 'sped.txt'))
 const store = async (req, res) => {}
 
-module.exports = { store }
+const getAll = async (req, res) => {
+  const result = await Reg0000.find()
+  return res.json(result)
+}
+
+module.exports = { store, getAll }
