@@ -3,32 +3,32 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true
+    required: true,
   },
   indServ: {
     type: String,
-    required: true
+    required: true,
   },
   dtIniServ: {
-    type: String
+    type: String,
   },
   dtFinServ: {
-    type: String
+    type: String,
   },
   perFiscal: {
     type: String,
-    required: true
+    required: true,
   },
   codArea: {
-    type: String
+    type: String,
   },
   terminal: {
-    type: String
+    type: String,
   },
   reg0000: {
-    type: String,
-    required: true
-  }
+    type: Object,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("regD530", RegSchema);

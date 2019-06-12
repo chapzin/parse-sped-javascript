@@ -3,96 +3,96 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true
+    required: true,
   },
   indOper: {
     type: String,
-    required: true
+    required: true,
   },
   indEmit: {
     type: String,
-    required: true
+    required: true,
   },
   codPart: {
     type: String,
-    required: true
+    required: true,
   },
   codMod: {
     type: String,
-    required: true
+    required: true,
   },
   codSit: {
     type: String,
-    required: true
+    required: true,
   },
   ser: {
-    type: String
+    type: String,
   },
   sub: {
-    type: String
+    type: String,
   },
   numDoc: {
     type: String,
-    required: true
+    required: true,
   },
   dtDoc: {
     type: String,
-    required: true
+    required: true,
   },
   dtAp: {
-    type: String
+    type: String,
   },
   vlDoc: {
     type: String,
-    required: true
+    required: true,
   },
   vlDesc: {
-    type: String
+    type: String,
   },
   vlServ: {
     type: String,
-    required: true
+    required: true,
   },
   vlServNt: {
     type: String,
-    required: true
+    required: true,
   },
   vlTerc: {
     type: String,
-    required: true
+    required: true,
   },
   vlDa: {
     type: String,
-    required: true
+    required: true,
   },
   vlBcIcms: {
     type: String,
-    required: true
+    required: true,
   },
   vlIcms: {
     type: String,
-    required: true
+    required: true,
   },
   codInf: {
-    type: String
+    type: String,
   },
   vlPis: {
-    type: String
+    type: String,
   },
   vlCofins: {
-    type: String
+    type: String,
   },
   codCta: {
-    type: String
+    type: String,
   },
   tpAssinante: {
     type: String,
-    required: true
+    required: true,
   },
   reg0000: {
-    type: String,
-    required: true
-  }
+    type: Object,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("regD500", RegSchema);

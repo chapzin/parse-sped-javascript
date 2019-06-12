@@ -9,6 +9,10 @@ const RegSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  reg0000: {
+    type: Object,
+    required: true
+  }
 })
 
 module.exports = mongoose.model('regD001', RegSchema)

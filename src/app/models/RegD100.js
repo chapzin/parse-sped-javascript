@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const RegSchema = new mongoose.Schema({
   reg: {
@@ -72,24 +72,24 @@ const RegSchema = new mongoose.Schema({
     type: String,
   },
   vlNt: {
-    type: String
+    type: String,
   },
   codInf: {
-    type: String
+    type: String,
   },
   codCta: {
-    type: String
+    type: String,
   },
   codMunOrig: {
-    type: String
+    type: String,
   },
   codMunDest: {
-    type: String
+    type: String,
   },
   reg0000: {
-    type: String,
+    type: Object,
     required: true,
   },
-})
+});
 
-module.exports = mongoose.model('regD100', RegSchema)
+module.exports = mongoose.model("regD100", RegSchema);

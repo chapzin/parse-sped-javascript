@@ -3,81 +3,81 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true
+    required: true,
   },
   codMod: {
     type: String,
-    required: true
+    required: true,
   },
   ser: {
     type: String,
-    required: true
+    required: true,
   },
   sub: {
-    type: String
+    type: String,
   },
   numDocIni: {
     type: String,
-    required: true
+    required: true,
   },
   numDocFin: {
     type: String,
-    required: true
+    required: true,
   },
   cstIcms: {
     type: String,
-    required: true
+    required: true,
   },
   cfop: {
     type: String,
-    required: true
+    required: true,
   },
   aliqIcms: {
-    type: String
+    type: String,
   },
   dtDoc: {
     type: String,
-    required: true
+    required: true,
   },
   vlOpr: {
     type: String,
-    required: true
+    required: true,
   },
   vlDesc: {
-    type: String
+    type: String,
   },
   vlServ: {
     type: String,
-    required: true
+    required: true,
   },
   vlSeg: {
-    type: String
+    type: String,
   },
   vlOutDesp: {
-    type: String
+    type: String,
   },
   vlBcIcms: {
     type: String,
-    required: true
+    required: true,
   },
   vlIcms: {
     type: String,
-    required: true
+    required: true,
   },
   vlRedBc: {
     type: String,
-    required: true
+    required: true,
   },
   codObs: {
-    type: String
+    type: String,
   },
   codCta: {
-    type: String
+    type: String,
   },
   reg0000: {
-    type: String,
-    required: true
-  }
+    type: Object,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("regD300", RegSchema);
