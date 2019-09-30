@@ -1,103 +1,103 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   indOper: {
     type: String,
-    required: true,
+    required: true
   },
   indEmit: {
     type: String,
-    required: true,
+    required: true
   },
   codPart: {
-    type: String,
+    type: String
   },
   codMod: {
     type: String,
-    required: true,
+    required: true
   },
   codSit: {
     type: String,
-    required: true,
+    required: true
   },
   ser: {
-    type: String,
+    type: String
   },
   numDoc: {
     type: Number,
-    required: true,
+    required: true
   },
   chvNfe: {
-    type: String,
+    type: String
   },
   dtDoc: {
-    type: String,
+    type: String
   },
   dtES: {
-    type: String,
+    type: String
   },
   vlDoc: {
-    type: Number,
+    type: Number
   },
   indPgto: {
-    type: String,
+    type: String
   },
   vlDesc: {
-    type: String,
+    type: String
   },
   vlAbatNt: {
-    type: String,
+    type: String
   },
   vlMerc: {
-    type: String,
+    type: String
   },
   indFrt: {
-    type: String,
+    type: String
   },
   vlFrt: {
-    type: String,
+    type: String
   },
   vlSeg: {
-    type: String,
+    type: String
   },
   vlOutDa: {
-    type: String,
+    type: String
   },
   vlBcIcms: {
-    type: String,
+    type: String
   },
   vlIcms: {
-    type: String,
+    type: String
   },
   vlBcIcmsSt: {
-    type: String,
+    type: String
   },
   vlIcmsSt: {
-    type: String,
+    type: String
   },
   vlIpi: {
-    type: String,
+    type: String
   },
   vlPis: {
-    type: String,
+    type: String
   },
   vlCofins: {
-    type: String,
+    type: String
   },
   vlPisSt: {
-    type: String,
+    type: String
   },
   vlCofinsSt: {
-    type: String,
+    type: String
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
-})
+    required: true
+  }
+});
 
-module.exports = mongoose.model('regC100', RegSchema)
+module.exports = mongoose.model("regC100", RegSchema);

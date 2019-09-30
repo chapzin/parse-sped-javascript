@@ -3,48 +3,48 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   codItem: {
     type: String,
-    required: true,
+    required: true
   },
   unid: {
     type: String,
-    required: true,
+    required: true
   },
   qtd: {
     type: String,
-    required: true,
+    required: true
   },
   vlUnit: {
     type: String,
-    required: true,
+    required: true
   },
   vlItem: {
     type: String,
-    required: true,
+    required: true
   },
   indProp: {
     type: String,
-    required: true,
+    required: true
   },
   codPart: {
-    type: String,
+    type: String
   },
   txtCompl: {
-    type: String,
+    type: String
   },
   codCta: {
-    type: String,
+    type: String
   },
   vlItemIr: {
-    type: String,
+    type: String
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 });
 
 module.exports = mongoose.model("regH010", RegSchema);

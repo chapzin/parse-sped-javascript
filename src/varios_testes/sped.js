@@ -6,10 +6,10 @@ const {
   reg0150,
   reg0190,
   reg0200,
-  reg0220,
-  reg0990
+  reg0220
 } = require("../app/blocos/bloco0");
-const { regC100 } = require("../app/blocos/blocoC");
+const { regC100, regC170 } = require("../app/blocos/blocoC");
+const { regH010 } = require("../app/blocos/blocoH");
 const { reg9999 } = require("../app/blocos/bloco9");
 const path = require("path");
 const mongoose = require("mongoose");
@@ -21,116 +21,133 @@ const Reg0190Model = require("../app/models/Bloco0/Reg0190");
 const Reg0200Model = require("../app/models/Bloco0/Reg0200");
 const Reg0220Model = require("../app/models/Bloco0/Reg0220");
 const RegC100Model = require("../app/models/BlocoC/RegC100");
-
+const RegC170Model = require("../app/models/BlocoC/RegC170");
+const RegH010Model = require("../app/models/BlocoH/RegH010");
+const LineByLineReader = require("line-by-line");
 const { mongodb } = require("../config/database");
 const timeStart = Date.now();
-const lineReader = file => {
-  return require("readline").createInterface({
-    input: fs.createReadStream(file)
+
+const readSped = file => {
+  let r0000 = {};
+  let reg0200p = {};
+  let regC100p = {};
+  const sped = new LineByLineReader(path.resolve("uploads", file));
+  const database = uri => {
+    mongoose.connect(uri, {
+      useCreateIndex: true,
+      useNewUrlParser: true
+    });
+  };
+  database(mongodb.uri);
+
+  sped.on("line", line => {
+    if (reg0000(line)) {
+      r0000 = reg0000(line);
+      Reg0000Model.create(r0000, (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
+    if (reg0005(line, r0000)) {
+      Reg0005Model.create(reg0005(line, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
+    if (reg0100(line, r0000)) {
+      Reg0100Model.create(reg0100(line, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
+    if (reg0150(line, r0000)) {
+      Reg0150Model.create(reg0150(line, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
+    if (reg0190(line, r0000)) {
+      Reg0190Model.create(reg0190(line, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+    if (reg0200(line, r0000)) {
+      reg0200p = reg0200(line, r0000);
+      Reg0200Model.create(reg0200(line, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
+    if (reg0220(line, reg0200p, r0000)) {
+      Reg0220Model.create(reg0220(line, reg0200p, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
+    if (regC100(line, r0000)) {
+      regC100p = regC100(line, r0000);
+      RegC100Model.create(regC100(line, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
+    if (regC170(line, regC100p, r0000)) {
+      RegC170Model.create(regC170(line, regC100p, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+    if (regH010(line, r0000)) {
+      RegH010Model.create(regH010(line, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
+    if (reg9999(line, r0000)) {
+      console.log("-=-=-=-=- FIM DO ARQUIVO SPED -=-=-=-=-=-=-");
+      const timeEnd = Date.now();
+      console.log(
+        `Duração da importação ${((timeEnd - timeStart) / 1000).toFixed(
+          2
+        )} segundos...`
+      );
+
+      // break;
+    }
   });
 };
-let r0000 = {};
-let reg0200p = {};
-const sped = lineReader(path.resolve("uploads", "sped02-2016.txt"));
-const database = uri => {
-  mongoose.connect(uri, {
-    useCreateIndex: true,
-    useNewUrlParser: true
-  });
-};
-database(mongodb.uri);
 
-sped.on("line", line => {
-  if (reg0000(line)) {
-    r0000 = reg0000(line);
-    console.log(r0000);
-    Reg0000Model.create(r0000, (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        // console.log('Adicionado reg0000')
-      }
-    });
-  }
+const files = fs.readdirSync(path.resolve("uploads"));
 
-  if (reg0005(line, r0000)) {
-    Reg0005Model.create(reg0005(line, r0000), (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        // console.log('Adicionado reg0005')
-      }
-    });
-  }
-
-  if (reg0100(line, r0000)) {
-    Reg0100Model.create(reg0100(line, r0000), (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        // console.log('Adicionado reg0100')
-      }
-    });
-  }
-
-  if (reg0150(line, r0000)) {
-    Reg0150Model.create(reg0150(line, r0000), (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        // console.log('Adicionado reg0150')
-      }
-    });
-  }
-
-  if (reg0190(line, r0000)) {
-    Reg0190Model.create(reg0190(line, r0000), (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        // console.log('Adicionado reg0190')
-      }
-    });
-  }
-  if (reg0200(line, r0000)) {
-    reg0200p = reg0200(line, r0000);
-    Reg0200Model.create(reg0200(line, r0000), (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        // console.log('Adicionado reg0200')
-      }
-    });
-  }
-
-  if (reg0220(line, reg0200p, r0000)) {
-    Reg0220Model.create(reg0220(line, reg0200p, r0000), (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        // console.log('Adicionado reg0220')
-      }
-    });
-  }
-
-  if (regC100(line, r0000)) {
-    // console.log(regC100(line, r0000))
-    RegC100Model.create(regC100(line, r0000), (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        // console.log('Adicionado regC100')
-      }
-    });
-  }
-  if (reg9999(line, r0000)) {
-    console.log("-=-=-=-=- FIM DO ARQUIVO SPED -=-=-=-=-=-=-");
-    const timeEnd = Date.now();
-    console.log(
-      `Duração da importação ${((timeEnd - timeStart) / 1000).toFixed(
-        2
-      )} segundos...`
-    );
-    // break;
-  }
+files.forEach(file => {
+  readSped(file);
 });
