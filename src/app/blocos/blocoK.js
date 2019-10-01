@@ -4,7 +4,8 @@ const regK001 = (line, reg0000) => {
     return {
       reg: ln[1],
       indMov: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -16,7 +17,8 @@ const regK100 = (line, reg0000) => {
       reg: ln[1],
       dtIni: ln[2],
       dtFin: ln[3],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -31,7 +33,8 @@ const regK200 = (line, reg0000) => {
       qtd: ln[4],
       indEst: ln[5],
       codPart: ln[6],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -46,7 +49,8 @@ const regK210 = (line, reg0000) => {
       codDocOs: ln[4],
       codItemOri: ln[5],
       qtdOri: ln[6],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -58,7 +62,8 @@ const regK215 = (line, reg0000) => {
       reg: ln[1],
       codItemDes: ln[2],
       qtdDes: ln[3],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -73,7 +78,8 @@ const regK220 = (line, reg0000) => {
       codItemDest: ln[4],
       qtdOri: ln[5],
       qtdDest: ln[6],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -88,7 +94,8 @@ const regK230 = (line, reg0000) => {
       codDocOp: ln[4],
       codItem: ln[5],
       qtdEnc: ln[6],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -102,7 +109,8 @@ const regK235 = (line, reg0000) => {
       codItem: ln[3],
       qtd: ln[4],
       codInsSubst: ln[5],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -115,7 +123,8 @@ const regK250 = (line, reg0000) => {
       dtProd: ln[2],
       codItem: ln[3],
       qtd: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -129,7 +138,8 @@ const regK255 = (line, reg0000) => {
       codItem: ln[3],
       qtd: ln[4],
       codInsSubst: ln[5],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -145,7 +155,8 @@ const regK260 = (line, reg0000) => {
       qtdSaida: ln[5],
       dtRet: ln[6],
       qtdRet: ln[7],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -158,7 +169,8 @@ const regK265 = (line, reg0000) => {
       codItem: ln[2],
       qtdCons: ln[3],
       qtdRet: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -175,7 +187,8 @@ const regK270 = (line, reg0000) => {
       qtdCorPos: ln[6],
       qtdCorNeg: ln[7],
       origem: ln[8],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -189,7 +202,8 @@ const regK275 = (line, reg0000) => {
       qtdCorPos: ln[3],
       qtdCorNeg: ln[4],
       codInsSubst: ln[5],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -205,7 +219,8 @@ const regK280 = (line, reg0000) => {
       qtdCorNeg: ln[5],
       indEst: ln[6],
       codPart: ln[7],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -218,7 +233,8 @@ const regK290 = (line, reg0000) => {
       dtIniOp: ln[2],
       dtFinOp: ln[3],
       codDocOp: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -230,7 +246,8 @@ const regK291 = (line, reg0000) => {
       reg: ln[1],
       codItem: ln[2],
       qtd: ln[3],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -242,7 +259,8 @@ const regK292 = (line, reg0000) => {
       reg: ln[1],
       codItem: ln[2],
       qtd: ln[3],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -253,7 +271,8 @@ const regK300 = (line, reg0000) => {
     return {
       reg: ln[1],
       dtProd: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -265,7 +284,8 @@ const regK301 = (line, reg0000) => {
       reg: ln[1],
       codItem: ln[2],
       qtd: ln[3],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -277,7 +297,8 @@ const regK302 = (line, reg0000) => {
       reg: ln[1],
       codItem: ln[2],
       qtd: ln[3],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -288,7 +309,8 @@ const regK990 = (line, reg0000) => {
     return {
       reg: ln[1],
       qtdLinK: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -315,5 +337,5 @@ module.exports = {
   regK300,
   regK301,
   regK302,
-  regK990,
+  regK990
 };

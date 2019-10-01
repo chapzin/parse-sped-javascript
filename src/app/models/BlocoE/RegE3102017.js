@@ -3,96 +3,100 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   indMovFcpDifal: {
     type: String,
-    required: true,
+    required: true
   },
   vlSldCredAntDifal: {
     type: String,
-    required: true,
+    required: true
   },
   vlTotDebitosDifal: {
     type: String,
-    required: true,
+    required: true
   },
   vlOutDebDifal: {
     type: String,
-    required: true,
+    required: true
   },
   vlTotCreditosDifal: {
     type: String,
-    required: true,
+    required: true
   },
   vlOutCredDifal: {
     type: String,
-    required: true,
+    required: true
   },
   vlSldDevAntDifal: {
     type: String,
-    required: true,
+    required: true
   },
   vlDeducoesDifal: {
     type: String,
-    required: true,
+    required: true
   },
   vlRecolDifal: {
     type: String,
-    required: true,
+    required: true
   },
   vlSldCredTransportarDifal: {
     type: String,
-    required: true,
+    required: true
   },
   debEspDifal: {
     type: String,
-    required: true,
+    required: true
   },
   vlSldCredAntFcp: {
     type: String,
-    required: true,
+    required: true
   },
   vlTotDebFcp: {
     type: String,
-    required: true,
+    required: true
   },
   vlOutDebFcp: {
     type: String,
-    required: true,
+    required: true
   },
   vlTotCredFcp: {
     type: String,
-    required: true,
+    required: true
   },
   vlOutCredFcp: {
     type: String,
-    required: true,
+    required: true
   },
   vlSldDevAntFcp: {
     type: String,
-    required: true,
+    required: true
   },
   vlDeducoesFcp: {
     type: String,
-    required: true,
+    required: true
   },
   vlRecolFcp: {
     type: String,
-    required: true,
+    required: true
   },
   vlSldCredTransportarFcp: {
     type: String,
-    required: true,
+    required: true
   },
   debEspFcp: {
     type: String,
-    required: true,
+    required: true
+  },
+  flag: {
+    type: String,
+    required: true
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 });
 
 module.exports = mongoose.model("regE310", RegSchema);

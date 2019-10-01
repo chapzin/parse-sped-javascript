@@ -3,46 +3,50 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   numBico: {
     type: String,
-    required: true,
+    required: true
   },
   nrInterv: {
-    type: String,
+    type: String
   },
   motInterv: {
-    type: String,
+    type: String
   },
   nomInterv: {
-    type: String,
+    type: String
   },
   cnpjInterv: {
-    type: String,
+    type: String
   },
   cpfInterv: {
-    type: String,
+    type: String
   },
   valFecha: {
     type: String,
-    required: true,
+    required: true
   },
   valAbert: {
     type: String,
-    required: true,
+    required: true
   },
   volAferi: {
-    type: String,
+    type: String
   },
   volVendas: {
     type: String,
-    required: true,
+    required: true
+  },
+  flag: {
+    type: String,
+    required: true
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 });
 
 module.exports = mongoose.model("reg1320", RegSchema);

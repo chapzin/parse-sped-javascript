@@ -3,64 +3,68 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   dtRegistro: {
     type: String,
-    required: true,
+    required: true
   },
   qtdMoid: {
-    type: String,
+    type: String
   },
   estqIni: {
     type: String,
-    required: true,
+    required: true
   },
   qtdProduz: {
-    type: String,
+    type: String
   },
   entAnidHid: {
-    type: String,
+    type: String
   },
   outrEntr: {
-    type: String,
+    type: String
   },
   perda: {
-    type: String,
+    type: String
   },
   cons: {
-    type: String,
+    type: String
   },
   saiAniHid: {
-    type: String,
+    type: String
   },
   saidas: {
     type: String,
-    required: true,
+    required: true
   },
   estqFin: {
     type: String,
-    required: true,
+    required: true
   },
   estqIniMel: {
-    type: String,
+    type: String
   },
   prodDiaMel: {
-    type: String,
+    type: String
   },
   utilMel: {
-    type: String,
+    type: String
   },
   prodAlcMel: {
-    type: String,
+    type: String
   },
   obs: {
+    type: String
+  },
+  flag: {
     type: String,
+    required: true
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 });
 
 module.exports = mongoose.model("reg1391", RegSchema);

@@ -1,70 +1,74 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   vlTotDebitos: {
     type: String,
-    required: true,
+    required: true
   },
   vlAjDebitos: {
     type: String,
-    required: true,
+    required: true
   },
   vlTotAjDebitos: {
     type: String,
-    required: true,
+    required: true
   },
   vlEstornosCred: {
     type: String,
-    required: true,
+    required: true
   },
   vlTotCreditos: {
     type: String,
-    required: true,
+    required: true
   },
   vlAjCreditos: {
     type: String,
-    required: true,
+    required: true
   },
   vlTotAjCreditos: {
     type: String,
-    required: true,
+    required: true
   },
   vlEstornoDeb: {
     type: String,
-    required: true,
+    required: true
   },
   vlSldCredorAnt: {
     type: String,
-    required: true,
+    required: true
   },
   vlSldApurado: {
     type: String,
-    required: true,
+    required: true
   },
   vlTotDed: {
     type: String,
-    required: true,
+    required: true
   },
   vlIcmsRecolher: {
     type: String,
-    required: true,
+    required: true
   },
   vlSldCredorTransportar: {
     type: String,
-    required: true,
+    required: true
   },
   debEsp: {
     type: String,
-    required: true,
+    required: true
+  },
+  flag: {
+    type: String,
+    required: true
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
-})
+    required: true
+  }
+});
 
-module.exports = mongoose.model('regE110', RegSchema)
+module.exports = mongoose.model("regE110", RegSchema);

@@ -4,7 +4,8 @@ const regE001 = (line, reg0000) => {
     return {
       reg: ln[1],
       indMov: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -16,7 +17,8 @@ const regE100 = (line, reg0000) => {
       reg: ln[1],
       dtIni: ln[2],
       dtFin: ln[3],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -40,7 +42,8 @@ const regE110 = (line, reg0000) => {
       vlIcmsRecolher: ln[13],
       vlSldCredorTransportar: ln[14],
       debEsp: ln[15],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -53,7 +56,8 @@ const regE111 = (line, reg0000) => {
       codAjApur: ln[2],
       DescrComplAj: ln[3],
       vlAjApur: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -68,7 +72,8 @@ const regE112 = (line, reg0000) => {
       indProc: ln[4],
       proc: ln[5],
       txtCompl: ln[6],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -87,7 +92,8 @@ const regE113 = (line, reg0000) => {
       codItem: ln[8],
       vlAjItem: ln[9],
       chvDoce: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -100,7 +106,8 @@ const regE115 = (line, reg0000) => {
       codInfAdic: ln[2],
       vlInfAdic: ln[3],
       descrComplAj: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -119,7 +126,8 @@ const regE116 = (line, reg0000) => {
       proc: ln[8],
       txtCompl: ln[9],
       mesRef: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -132,7 +140,8 @@ const regE200 = (line, reg0000) => {
       uf: ln[2],
       dtIni: ln[3],
       dtFin: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -156,7 +165,8 @@ const regE210 = (line, reg0000) => {
       vlIcmsRecolSt: ln[13],
       vlSldCredStTransportar: ln[14],
       debEspSt: ln[15],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -169,7 +179,8 @@ const regE220 = (line, reg0000) => {
       codAjApur: ln[2],
       descrComplAj: ln[3],
       vlAjApur: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -184,7 +195,8 @@ const regE230 = (line, reg0000) => {
       indProc: ln[4],
       proc: ln[5],
       txtCompl: ln[6],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -203,7 +215,8 @@ const regE240 = (line, reg0000) => {
       codItem: ln[8],
       vlAjItem: ln[9],
       chvDoce: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -222,7 +235,8 @@ const regE250 = (line, reg0000) => {
       proc: ln[8],
       txtCompl: ln[9],
       mesRef: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -235,7 +249,8 @@ const regE300 = (line, reg0000) => {
       uf: ln[2],
       dtIni: ln[3],
       dtFin: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -259,7 +274,8 @@ const regE310ate2016 = (line, reg0000) => {
         vlRecol: ln[12],
         vlSldCredTransportar: ln[13],
         debEspDifal: ln[14],
-        reg0000,
+        flag: "sped",
+        reg0000
       };
     }
   }
@@ -292,7 +308,8 @@ const regE310depois2016 = (line, reg0000) => {
         vlRecolFcp: ln[20],
         vlSldCredTransportarFcp: ln[21],
         debEspFcp: ln[22],
-        reg0000,
+        flag: "sped",
+        reg0000
       };
     }
   }
@@ -306,7 +323,8 @@ const regE311 = (line, reg0000) => {
       codAjApur: ln[2],
       descrComplAj: ln[3],
       vlAjApur: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -321,7 +339,8 @@ const regE312 = (line, reg0000) => {
       indProc: ln[4],
       proc: ln[5],
       txtCompl: ln[6],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -340,7 +359,8 @@ const regE313 = (line, reg0000) => {
       dtDoc: ln[8],
       codItem: ln[9],
       vlAjItem: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -359,7 +379,8 @@ const regE316 = (line, reg0000) => {
       proc: ln[8],
       txtCompl: ln[9],
       mesRef: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -372,7 +393,8 @@ const regE500 = (line, reg0000) => {
       indApur: ln[2],
       dtIni: ln[3],
       dtFin: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -387,7 +409,8 @@ const regE510 = (line, reg0000) => {
       vlContIpi: ln[4],
       vlBcIpi: ln[5],
       vlIpi: ln[6],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -404,7 +427,8 @@ const regE520 = (line, reg0000) => {
       vlOcIpi: ln[6],
       vlScIpi: ln[7],
       vlSdIpi: ln[8],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -420,7 +444,8 @@ const regE530 = (line, reg0000) => {
       indDoc: ln[5],
       numDoc: ln[6],
       descrAj: ln[7],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -439,7 +464,8 @@ const regE531 = (line, reg0000) => {
       codItem: ln[8],
       vlAjItem: ln[9],
       chvNfe: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -450,7 +476,8 @@ const regE990 = (line, reg0000) => {
     return {
       reg: ln[1],
       qtdLinE: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -482,5 +509,5 @@ module.exports = {
   regE520,
   regE530,
   regE531,
-  regE990,
+  regE990
 };

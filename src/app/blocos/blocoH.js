@@ -4,7 +4,8 @@ const regH001 = (line, reg0000) => {
     return {
       reg: ln[1],
       indMov: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -17,7 +18,8 @@ const regH005 = (line, reg0000) => {
       dtInv: ln[2],
       vlInv: ln[3],
       motInv: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -37,7 +39,8 @@ const regH010 = (line, reg0000) => {
       txtCompl: ln[9],
       codCta: ln[10],
       vlItemIr: ln[11],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -50,7 +53,8 @@ const regH020 = (line, reg0000) => {
       cstIcms: ln[2],
       bcIcms: ln[3],
       vlIcms: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -61,7 +65,8 @@ const regH990 = (line, reg0000) => {
     return {
       reg: ln[1],
       qtdLinH: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };

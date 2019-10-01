@@ -3,73 +3,77 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   numSeq: {
     type: String,
-    required: true,
+    required: true
   },
   indEmit: {
     type: String,
-    required: true,
+    required: true
   },
   cnpjCpfEmit: {
     type: String,
-    required: true,
+    required: true
   },
   ufEmit: {
     type: String,
-    required: true,
+    required: true
   },
   ieEmit: {
-    type: String,
+    type: String
   },
   codMunOrig: {
     type: String,
-    required: true,
+    required: true
   },
   cnpjCpfTom: {
     type: String,
-    required: true,
+    required: true
   },
   ufTom: {
     type: String,
-    required: true,
+    required: true
   },
   ieTom: {
-    type: String,
+    type: String
   },
   codMunDest: {
     type: String,
-    required: true,
+    required: true
   },
   codMod: {
     type: String,
-    required: true,
+    required: true
   },
   ser: {
     type: String,
-    required: true,
+    required: true
   },
   sub: {
-    type: String,
+    type: String
   },
   numDoc: {
     type: String,
-    required: true,
+    required: true
   },
   dtDoc: {
     type: String,
-    required: true,
+    required: true
   },
   vlDoc: {
     type: String,
-    required: true,
+    required: true
+  },
+  flag: {
+    type: String,
+    required: true
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 });
 
 module.exports = mongoose.model("regD180", RegSchema);

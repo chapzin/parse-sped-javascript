@@ -45,6 +45,10 @@ const RegSchema = new mongoose.Schema({
   cest: {
     type: String
   },
+  flag: {
+    type: String,
+    required: true
+  },
   reg0000: {
     type: Object,
     required: true

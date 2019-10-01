@@ -3,81 +3,85 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   codMod: {
     type: String,
-    required: true,
+    required: true
   },
   codMun: {
     type: String,
-    required: true,
+    required: true
   },
   ser: {
-    type: String,
+    type: String
   },
   sub: {
-    type: String,
+    type: String
   },
   codCons: {
     type: String,
-    required: true,
+    required: true
   },
   qtdCons: {
     type: String,
-    required: true,
+    required: true
   },
   qtdCanc: {
-    type: String,
+    type: String
   },
   dtDoc: {
     type: String,
-    required: true,
+    required: true
   },
   vlDoc: {
     type: String,
-    required: true,
+    required: true
   },
   vlDesc: {
-    type: String,
+    type: String
   },
   cons: {
-    type: String,
+    type: String
   },
   vlForn: {
-    type: String,
+    type: String
   },
   vlServNt: {
-    type: String,
+    type: String
   },
   vlTerc: {
-    type: String,
+    type: String
   },
   vlDa: {
-    type: String,
+    type: String
   },
   vlBcIcms: {
-    type: String,
+    type: String
   },
   vlIcms: {
-    type: String,
+    type: String
   },
   vlBcIcmsSt: {
-    type: String,
+    type: String
   },
   vlIcmsSt: {
-    type: String,
+    type: String
   },
   vlPis: {
-    type: String,
+    type: String
   },
   vlCofins: {
+    type: String
+  },
+  flag: {
     type: String,
+    required: true
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 });
 
 module.exports = mongoose.model("regC600", RegSchema);

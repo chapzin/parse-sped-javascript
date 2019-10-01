@@ -3,101 +3,105 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   indOper: {
     type: String,
-    required: true,
+    required: true
   },
   indEmit: {
     type: String,
-    required: true,
+    required: true
   },
   codPart: {
     type: String,
-    required: true,
+    required: true
   },
   codMod: {
     type: String,
-    required: true,
+    required: true
   },
   codSit: {
     type: String,
-    required: true,
+    required: true
   },
   ser: {
-    type: String,
+    type: String
   },
   sub: {
-    type: String,
+    type: String
   },
   codCons: {
     type: String,
-    required: true,
+    required: true
   },
   numDoc: {
     type: String,
-    required: true,
+    required: true
   },
   dtDoc: {
     type: String,
-    required: true,
+    required: true
   },
   dtEs: {
     type: String,
-    required: true,
+    required: true
   },
   vlDoc: {
     type: String,
-    required: true,
+    required: true
   },
   vlDesc: {
-    type: String,
+    type: String
   },
   vlForn: {
     type: String,
-    required: true,
+    required: true
   },
   vlServNt: {
-    type: String,
+    type: String
   },
   vlTerc: {
-    type: String,
+    type: String
   },
   vlDa: {
-    type: String,
+    type: String
   },
   vlBcIcms: {
-    type: String,
+    type: String
   },
   vlIcms: {
-    type: String,
+    type: String
   },
   vlBcIcmsSt: {
-    type: String,
+    type: String
   },
   vlIcmsSt: {
-    type: String,
+    type: String
   },
   codInf: {
-    type: String,
+    type: String
   },
   vlPis: {
-    type: String,
+    type: String
   },
   vlCofins: {
-    type: String,
+    type: String
   },
   tpLigacao: {
-    type: String,
+    type: String
   },
   codGrupoTensao: {
+    type: String
+  },
+  flag: {
     type: String,
+    required: true
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 });
 
 module.exports = mongoose.model("regC500", RegSchema);

@@ -4,7 +4,8 @@ const regB001 = (line, reg0000) => {
     return {
       reg: ln[1],
       indDad: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -34,7 +35,8 @@ const regB020 = (line, reg0000) => {
       vlIssRt: ln[19],
       vlIss: ln[20],
       codInfObs: ln[21],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -50,7 +52,8 @@ const regB025 = (line, reg0000) => {
       vlIssP: ln[5],
       vlIsntIssP: ln[6],
       codServ: ln[7],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -71,7 +74,8 @@ const regB030 = (line, reg0000) => {
       vlBcIss: ln[10],
       vlIss: ln[11],
       codInfObs: ln[12],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -87,7 +91,8 @@ const regB035 = (line, reg0000) => {
       vlIssP: ln[5],
       vlIsntIssP: ln[6],
       codServ: ln[7],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -107,7 +112,8 @@ const regB350 = (line, reg0000) => {
       aliqIss: ln[9],
       vlIss: ln[10],
       codInfObs: ln[11],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -123,7 +129,8 @@ const regB420 = (line, reg0000) => {
       vlIsntIss: ln[5],
       vlIss: ln[6],
       codServ: ln[7],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -138,7 +145,8 @@ const regB440 = (line, reg0000) => {
       vlContRt: ln[4],
       vlBcIssRt: ln[5],
       vlIssRt: ln[6],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -155,7 +163,8 @@ const regB460 = (line, reg0000) => {
       proc: ln[6],
       codInfObs: ln[7],
       indObr: ln[8],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -179,7 +188,8 @@ const regB470 = (line, reg0000) => {
       vlIssRec: ln[13],
       vlIssSt: ln[14],
       vlIssRecUni: ln[15],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -192,7 +202,8 @@ const regB500 = (line, reg0000) => {
       vlRec: ln[2],
       qtdProf: ln[3],
       vlOr: ln[5],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -207,7 +218,8 @@ const regB510 = (line, reg0000) => {
       indSoc: ln[4],
       cpf: ln[5],
       nome: ln[6],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -218,7 +230,8 @@ const regB990 = (line, reg0000) => {
     return {
       reg: ln[1],
       qtdLinB: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -236,5 +249,5 @@ module.exports = {
   regB470,
   regB500,
   regB510,
-  regB990,
+  regB990
 };

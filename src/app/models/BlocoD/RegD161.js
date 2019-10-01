@@ -3,36 +3,40 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   indCarga: {
     type: String,
-    required: true,
+    required: true
   },
   cnpjCpfCol: {
-    type: String,
+    type: String
   },
   ieCol: {
-    type: String,
+    type: String
   },
   codMunCol: {
     type: String,
-    required: true,
+    required: true
   },
   cnpjCpfEntg: {
-    type: String,
+    type: String
   },
   ieEntg: {
-    type: String,
+    type: String
   },
   codMunEntg: {
     type: String,
-    required: true,
+    required: true
+  },
+  flag: {
+    type: String,
+    required: true
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 });
 
 module.exports = mongoose.model("regD161", RegSchema);

@@ -9,6 +9,7 @@ const regC001 = (line, reg0000) => {
     return {
       reg: ln[1],
       indMov: ln[2],
+      flag: "sped",
       reg0000
     };
   }
@@ -47,6 +48,7 @@ const regC100 = (line, reg0000) => {
       vlCofins: convertToFloat(ln[27]),
       vlPisSt: convertToFloat(ln[28]),
       vlCofinsSt: convertToFloat(ln[29]),
+      flag: "sped",
       reg0000
     };
   }
@@ -60,6 +62,7 @@ const regC101 = (line, reg0000) => {
       vlFcpUfDest: convertToFloat(ln[2]),
       vlIcmsUfDest: convertToFloat(ln[3]),
       vlIcmsUfRem: convertToFloat(ln[4]),
+      flag: "sped",
       reg0000
     };
   }
@@ -72,6 +75,7 @@ const regC105 = (line, reg0000) => {
       reg: ln[1],
       oper: ln[2],
       uf: ln[3],
+      flag: "sped",
       reg0000
     };
   }
@@ -84,6 +88,7 @@ const regC110 = (line, reg0000) => {
       reg: ln[1],
       codInf: ln[2],
       txtCompl: ln[3],
+      flag: "sped",
       reg0000
     };
   }
@@ -96,6 +101,7 @@ const regC111 = (line, reg0000) => {
       reg: ln[1],
       numProc: ln[2],
       indProc: ln[3],
+      flag: "sped",
       reg0000
     };
   }
@@ -113,6 +119,7 @@ const regC112 = (line, reg0000) => {
       vlDa: convertToFloat(ln[6]),
       dtVcto: convertStringToDateSped(ln[7]),
       dtPgto: convertStringToDateSped(ln[8]),
+      flag: "sped",
       reg0000
     };
   }
@@ -132,6 +139,7 @@ const regC113 = (line, reg0000) => {
       numDoc: ln[8],
       dtDoc: convertStringToDateSped(ln[9]),
       chvDoce: ln[10],
+      flag: "sped",
       reg0000
     };
   }
@@ -147,6 +155,7 @@ const regC114 = (line, reg0000) => {
       ecfCx: ln[4],
       numDoc: ln[5],
       dtDoc: convertStringToDateSped(ln[6]),
+      flag: "sped",
       reg0000
     };
   }
@@ -166,6 +175,7 @@ const regC115 = (line, reg0000) => {
       ieEntg: ln[8],
       cpfEntg: ln[9],
       codMunEntg: ln[10],
+      flag: "sped",
       reg0000
     };
   }
@@ -181,6 +191,7 @@ const regC116 = (line, reg0000) => {
       chvCfe: ln[4],
       numCfe: ln[5],
       dtDoc: convertStringToDateSped(ln[6]),
+      flag: "sped",
       reg0000
     };
   }
@@ -196,6 +207,7 @@ const regC120 = (line, reg0000) => {
       pisImp: ln[4],
       cofinsImp: ln[5],
       numAcdraw: ln[6],
+      flag: "sped",
       reg0000
     };
   }
@@ -213,6 +225,7 @@ const regC130 = (line, reg0000) => {
       vlIrrf: convertToFloat(ln[6]),
       vlBcPrev: convertToFloat(ln[7]),
       vlPrev: convertToFloat(ln[8]),
+      flag: "sped",
       reg0000
     };
   }
@@ -229,6 +242,7 @@ const regC140 = (line, reg0000) => {
       numTit: ln[5],
       qtdParc: ln[6],
       vlTit: convertToFloat(ln[7]),
+      flag: "sped",
       reg0000
     };
   }
@@ -242,6 +256,7 @@ const regC141 = (line, reg0000) => {
       numParc: ln[2],
       dtVcto: convertStringToDateSped(ln[3]),
       vlParc: convertToFloat(ln[4]),
+      flag: "sped",
       reg0000
     };
   }
@@ -258,6 +273,7 @@ const regC160 = (line, reg0000) => {
       pesoBrt: convertToFloat(ln[5]),
       pesoLiq: convertToFloat(ln[6]),
       ufId: ln[7],
+      flag: "sped",
       reg0000
     };
   }
@@ -280,6 +296,7 @@ const regC165 = (line, reg0000) => {
       nomMot: ln[11],
       cpf: ln[12],
       ufId: ln[13],
+      flag: "sped",
       reg0000
     };
   }
@@ -293,7 +310,7 @@ const regC170 = (line, regC100, reg0000) => {
       numItem: ln[2],
       codItem: ln[3],
       descrCompl: ln[4],
-      qtd: ln[5],
+      qtd: convertToFloat(ln[5]),
       unid: ln[6],
       vlItem: convertToFloat(ln[7]),
       vlDesc: convertToFloat(ln[8]),
@@ -326,6 +343,7 @@ const regC170 = (line, regC100, reg0000) => {
       aliqCofins2: convertToFloat(ln[35]),
       vlCofins: convertToFloat(ln[36]),
       codCta: ln[37],
+      flag: "sped",
       regC100,
       reg0000
     };
@@ -339,6 +357,7 @@ const regC171 = (line, reg0000) => {
       reg: ln[1],
       numTanque: ln[2],
       qtde: ln[3],
+      flag: "sped",
       reg0000
     };
   }
@@ -352,6 +371,7 @@ const regC172 = (line, reg0000) => {
       vlBcIssqn: convertToFloat(ln[2]),
       aliqIssqn: convertToFloat(ln[3]),
       vlIssqn: convertToFloat(ln[4]),
+      flag: "sped",
       reg0000
     };
   }
@@ -369,6 +389,7 @@ const regC173 = (line, reg0000) => {
       indMed: ln[6],
       tpProd: ln[7],
       vlTabMax: convertToFloat(ln[8]),
+      flag: "sped",
       reg0000
     };
   }
@@ -382,6 +403,7 @@ const regC174 = (line, reg0000) => {
       indArm: ln[2],
       numArm: ln[3],
       descrCompl: ln[4],
+      flag: "sped",
       reg0000
     };
   }
@@ -396,6 +418,7 @@ const regC175 = (line, reg0000) => {
       cnpj: ln[3],
       uf: ln[4],
       chassiVeic: ln[5],
+      flag: "sped",
       reg0000
     };
   }
@@ -431,6 +454,7 @@ const regC176 = (line, reg0000) => {
       itemNfeRet: ln[24],
       codDa: ln[25],
       numDa: ln[26],
+      flag: "sped",
       reg0000
     };
   }
@@ -443,6 +467,7 @@ const regC177 = (line, reg0000) => {
       reg: ln[1],
       codSeloIpi: ln[2],
       qtSeloIpi: ln[3],
+      flag: "sped",
       reg0000
     };
   }
@@ -456,6 +481,7 @@ const regC178 = (line, reg0000) => {
       clEnq: ln[2],
       vlUnid: convertToFloat(ln[3]),
       quantPad: convertToFloat(ln[4]),
+      flag: "sped",
       reg0000
     };
   }
@@ -471,6 +497,7 @@ const regC179 = (line, reg0000) => {
       icmsStCompl: convertToFloat(ln[4]),
       bcRet: convertToFloat(ln[5]),
       icmsRet: convertToFloat(ln[6]),
+      flag: "sped",
       reg0000
     };
   }
@@ -493,6 +520,7 @@ const regC190 = (line, regC100, reg0000) => {
       vlIpi: convertToFloat(ln[11]),
       codObs: ln[12],
       chvNfe: regC100.chaveNfe,
+      flag: "sped",
       reg0000
     };
   }
@@ -505,6 +533,7 @@ const regC195 = (line, reg0000) => {
       reg: ln[1],
       codObs: ln[2],
       txtCompl: ln[3],
+      flag: "sped",
       reg0000
     };
   }
@@ -522,6 +551,7 @@ const regC197 = (line, reg0000) => {
       aliqIcms: convertToFloat(ln[6]),
       vlIcms: convertToFloat(ln[7]),
       vlOutros: convertToFloat(ln[8]),
+      flag: "sped",
       reg0000
     };
   }
@@ -542,6 +572,7 @@ const regC300 = (line, reg0000) => {
       vlPis: convertToFloat(ln[9]),
       vlCofins: convertToFloat(ln[10]),
       codCta: ln[11],
+      flag: "sped",
       reg0000
     };
   }
@@ -553,6 +584,7 @@ const regC310 = (line, reg0000) => {
     return {
       reg: ln[1],
       numDocCanc: ln[2],
+      flag: "sped",
       reg0000
     };
   }
@@ -571,6 +603,7 @@ const regC320 = (line, reg0000) => {
       vlIcms: convertToFloat(ln[7]),
       vlRedBc: convertToFloat(ln[8]),
       codObs: ln[9],
+      flag: "sped",
       reg0000
     };
   }
@@ -590,6 +623,7 @@ const regC321 = (line, reg0000) => {
       vlIcms: convertToFloat(ln[8]),
       vlPis: convertToFloat(ln[9]),
       vlCofins: convertToFloat(ln[10]),
+      flag: "sped",
       reg0000
     };
   }
@@ -611,6 +645,7 @@ const regC350 = (line, reg0000) => {
       vlPis: convertToFloat(ln[10]),
       vlCofins: convertToFloat(ln[11]),
       codCta: ln[12],
+      flag: "sped",
       reg0000
     };
   }
@@ -627,6 +662,7 @@ const regC370 = (line, reg0000) => {
       unid: ln[5],
       vlItem: convertToFloat(ln[6]),
       vlDesc: convertToFloat(ln[7]),
+      flag: "sped",
       reg0000
     };
   }
@@ -645,6 +681,7 @@ const regC390 = (line, reg0000) => {
       vlIcms: convertToFloat(ln[7]),
       vlRedBc: convertToFloat(ln[8]),
       codObs: ln[9],
+      flag: "sped",
       reg0000
     };
   }
@@ -659,6 +696,7 @@ const regC400 = (line, reg0000) => {
       ecfMod: ln[3],
       ecfFab: ln[4],
       ecfCx: ln[5],
+      flag: "sped",
       reg0000
     };
   }
@@ -675,6 +713,7 @@ const regC405 = (line, reg0000) => {
       numCooFin: ln[5],
       gtFin: convertToFloat(ln[6]),
       vlBrt: convertToFloat(ln[7]),
+      flag: "sped",
       reg0000
     };
   }
@@ -687,6 +726,7 @@ const regC410 = (line, reg0000) => {
       reg: ln[1],
       vlPis: convertToFloat(ln[2]),
       vlCofins: convertToFloat(ln[3]),
+      flag: "sped",
       reg0000
     };
   }
@@ -701,6 +741,7 @@ const regC420 = (line, reg0000) => {
       vlrAcumTot: convertToFloat(ln[3]),
       nrTot: ln[4],
       descrNrTot: ln[5],
+      flag: "sped",
       reg0000
     };
   }
@@ -717,6 +758,7 @@ const regC425 = (line, reg0000) => {
       vlItem: convertToFloat(ln[5]),
       vlPis: convertToFloat(ln[6]),
       vlCofins: convertToFloat(ln[7]),
+      flag: "sped",
       reg0000
     };
   }
@@ -736,6 +778,7 @@ const regC460 = (line, reg0000) => {
       vlCofins: convertToFloat(ln[8]),
       cpfCnpj: ln[9],
       nomAdq: ln[10],
+      flag: "sped",
       reg0000
     };
   }
@@ -748,6 +791,7 @@ const regC465 = (line, reg0000) => {
       reg: ln[1],
       chvNfe: ln[2],
       numCcf: ln[3],
+      flag: "sped",
       reg0000
     };
   }
@@ -768,6 +812,7 @@ const regC470 = (line, reg0000) => {
       aliqIcms: convertToFloat(ln[9]),
       vlPis: convertToFloat(ln[10]),
       vlCofins: convertToFloat(ln[11]),
+      flag: "sped",
       reg0000
     };
   }
@@ -785,6 +830,7 @@ const regC490 = (line, reg0000) => {
       vlBcIcms: convertToFloat(ln[6]),
       vlIcms: convertToFloat(ln[7]),
       codObs: ln[8],
+      flag: "sped",
       reg0000
     };
   }
@@ -809,6 +855,7 @@ const regC495 = (line, reg0000) => {
       vlIsen: convertToFloat(ln[13]),
       vlNt: convertToFloat(ln[14]),
       vlIcmsSt: convertToFloat(ln[15]),
+      flag: "sped",
       reg0000
     };
   }
@@ -845,6 +892,7 @@ const regC500 = (line, reg0000) => {
       vlCofins: convertToFloat(ln[25]),
       tpLigacao: ln[26],
       codGrupoTensao: ln[27],
+      flag: "sped",
       reg0000
     };
   }
@@ -875,6 +923,7 @@ const regC510 = (line, reg0000) => {
       vlPis: convertToFloat(ln[19]),
       vlCofins: convertToFloat(ln[20]),
       codCta: ln[21],
+      flag: "sped",
       reg0000
     };
   }
@@ -895,6 +944,7 @@ const regC590 = (line, reg0000) => {
       vlIcmsSt: convertToFloat(ln[9]),
       vlRedBc: convertToFloat(ln[10]),
       codObs: ln[11],
+      flag: "sped",
       reg0000
     };
   }
@@ -926,6 +976,7 @@ const regC600 = (line, reg0000) => {
       vlIcmsSt: convertToFloat(ln[20]),
       vlPis: convertToFloat(ln[21]),
       vlCofins: convertToFloat(ln[22]),
+      flag: "sped",
       reg0000
     };
   }
@@ -937,6 +988,7 @@ const regC601 = (line, reg0000) => {
     return {
       reg: ln[1],
       numDocCanc: ln[2],
+      flag: "sped",
       reg0000
     };
   }
@@ -963,6 +1015,7 @@ const regC610 = (line, reg0000) => {
       vlPis: ln[15],
       vlCofins: ln[16],
       codCta: ln[17],
+      flag: "sped",
       reg0000
     };
   }
@@ -983,6 +1036,7 @@ const regC690 = (line, reg0000) => {
       vlBcIcmsSt: ln[9],
       vlIcmsSt: ln[10],
       codObs: ln[11],
+      flag: "sped",
       reg0000
     };
   }
@@ -1001,6 +1055,7 @@ const regC700 = (line, reg0000) => {
       dtDocFin: ln[7],
       nomMest: ln[8],
       chvCodDig: ln[9],
+      flag: "sped",
       reg0000
     };
   }
@@ -1021,6 +1076,7 @@ const regC790 = (line, reg0000) => {
       vlIcmsSt: ln[9],
       vlRedBc: ln[10],
       codObs: ln[11],
+      flag: "sped",
       reg0000
     };
   }
@@ -1034,6 +1090,7 @@ const regC791 = (line, reg0000) => {
       uf: ln[2],
       vlBcIcmsSt: ln[3],
       vlIcmsSt: ln[4],
+      flag: "sped",
       reg0000
     };
   }
@@ -1060,6 +1117,7 @@ const regC800 = (line, reg0000) => {
       vlIcms: ln[15],
       vlPisSt: ln[16],
       vlCofinsSt: ln[17],
+      flag: "sped",
       reg0000
     };
   }
@@ -1077,6 +1135,7 @@ const regC850 = (line, reg0000) => {
       vlBcIcms: ln[6],
       vlIcms: ln[7],
       codObs: ln[8],
+      flag: "sped",
       reg0000
     };
   }
@@ -1092,6 +1151,7 @@ const regC860 = (line, reg0000) => {
       dtDoc: ln[4],
       docIni: ln[5],
       docFim: ln[6],
+      flag: "sped",
       reg0000
     };
   }
@@ -1109,6 +1169,7 @@ const regC890 = (line, reg0000) => {
       vlBcIcms: ln[6],
       vlIcms: ln[7],
       codObs: ln[8],
+      flag: "sped",
       reg0000
     };
   }
@@ -1120,6 +1181,7 @@ const regC990 = (line, reg0000) => {
     return {
       reg: ln[1],
       qtdLinC: ln[2],
+      flag: "sped",
       reg0000
     };
   }

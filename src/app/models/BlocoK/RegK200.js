@@ -3,31 +3,35 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   dtEst: {
     type: String,
-    required: true,
+    required: true
   },
   codItem: {
     type: String,
-    required: true,
+    required: true
   },
   qtd: {
     type: String,
-    required: true,
+    required: true
   },
   indEst: {
     type: String,
-    required: true,
+    required: true
   },
   codPart: {
+    type: String
+  },
+  flag: {
     type: String,
+    required: true
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 });
 
 module.exports = mongoose.model("regK200", RegSchema);

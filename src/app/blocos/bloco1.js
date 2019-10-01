@@ -4,7 +4,8 @@ const reg1001 = (line, reg0000) => {
     return {
       reg: ln[1],
       indMod: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -26,7 +27,8 @@ const reg1010 = (line, reg0000) => {
       indGiaf1: ln[11],
       indGiaf3: ln[12],
       indGiaf4: ln[13],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -47,7 +49,8 @@ const reg1100 = (line, reg0000) => {
       dtAvb: ln[10],
       tpChc: ln[11],
       pais: ln[12],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -63,7 +66,8 @@ const reg1105 = (line, reg0000) => {
       chvNfe: ln[5],
       dtDoc: ln[6],
       codItem: ln[7],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -82,7 +86,8 @@ const reg1110 = (line, reg0000) => {
       nrMemo: ln[8],
       qtd: ln[9],
       unid: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -98,7 +103,8 @@ const reg1200 = (line, reg0000) => {
       credReceb: ln[5],
       credUtil: ln[6],
       sldCredFim: ln[7],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -111,7 +117,8 @@ const reg1210 = (line, reg0000) => {
       tipoUtil: ln[2],
       vlCredUtil: ln[3],
       chvDoce: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -131,7 +138,8 @@ const reg1300 = (line, reg0000) => {
       valAjPerda: ln[9],
       valAjGanho: ln[10],
       fechFisico: ln[11],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -149,7 +157,8 @@ const reg1310 = (line, reg0000) => {
       estqEscr: ln[7],
       valAjPerda: ln[8],
       fechFisico: ln[9],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -168,7 +177,8 @@ const reg1320 = (line, reg0000) => {
       valAbert: ln[9],
       volAferi: ln[10],
       volVendas: ln[11],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -182,7 +192,8 @@ const reg1350 = (line, reg0000) => {
       fabricante: ln[3],
       modelo: ln[4],
       tipoMedicao: ln[5],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -194,7 +205,8 @@ const reg1360 = (line, reg0000) => {
       reg: ln[1],
       numLacre: ln[2],
       dtAplicacao: ln[3],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -207,7 +219,8 @@ const reg1370 = (line, reg0000) => {
       numBico: ln[2],
       codItem: ln[3],
       numTanque: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -218,7 +231,8 @@ const reg1390 = (line, reg0000) => {
     return {
       reg: ln[1],
       codProd: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -244,7 +258,8 @@ const reg1391 = (line, reg0000) => {
       utilMel: ln[15],
       prodAlcMel: ln[16],
       obs: ln[17],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -257,7 +272,8 @@ const reg1400 = (line, reg0000) => {
       codItemIpm: ln[2],
       mun: ln[3],
       valor: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -293,7 +309,8 @@ const reg1500 = (line, reg0000) => {
       vlCofins: ln[25],
       tpLigacao: ln[26],
       codGrupoTensao: ln[27],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -323,7 +340,8 @@ const reg1510 = (line, reg0000) => {
       vlPis: ln[19],
       vlCofins: ln[20],
       codCta: ln[21],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -336,7 +354,8 @@ const reg1600 = (line, reg0000) => {
       codPart: ln[2],
       totCredito: ln[3],
       totDebito: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -353,7 +372,8 @@ const reg1700 = (line, reg0000) => {
       numDocIni: ln[6],
       numDocFin: ln[7],
       numAut: ln[8],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -365,7 +385,8 @@ const reg1710 = (line, reg0000) => {
       reg: ln[1],
       numDocIni: ln[2],
       numDocFin: ln[3],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -384,7 +405,8 @@ const reg1800 = (line, reg0000) => {
       vlIcmsApur: ln[8],
       vlBcIcmsApur: ln[9],
       vlDif: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -396,7 +418,8 @@ const reg1900 = (line, reg0000) => {
       reg: ln[1],
       indApurIcms: ln[2],
       descrComplOutApur: ln[3],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -408,7 +431,8 @@ const reg1910 = (line, reg0000) => {
       reg: ln[1],
       dtIni: ln[2],
       dtFin: ln[3],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -430,7 +454,8 @@ const reg1920 = (line, reg0000) => {
       vlIcmsRecolherOa: ln[11],
       vlSldCredorTranspOa: ln[12],
       debEspOa: ln[13],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -443,7 +468,8 @@ const reg1921 = (line, reg0000) => {
       codAjApur: ln[2],
       descrComplAj: ln[3],
       vlAjApur: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -458,7 +484,8 @@ const reg1922 = (line, reg0000) => {
       indProc: ln[4],
       proc: ln[5],
       txtCompl: ln[6],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -477,7 +504,8 @@ const reg1923 = (line, reg0000) => {
       codItem: ln[8],
       vlAjItem: ln[9],
       chvDoce: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -490,7 +518,8 @@ const reg1925 = (line, reg0000) => {
       codInfAdic: ln[2],
       vlInfAdic: ln[3],
       descrComplAj: ln[4],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -509,7 +538,8 @@ const reg1926 = (line, reg0000) => {
       proc: ln[8],
       txtCompl: ln[9],
       mesRef: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -531,7 +561,8 @@ const reg1960 = (line, reg0000) => {
       g109: ln[11],
       g110: ln[12],
       g111: ln[13],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -552,7 +583,8 @@ const reg1970 = (line, reg0000) => {
       g30T: ln[10],
       g308: ln[11],
       g309: ln[12],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -566,7 +598,8 @@ const reg1975 = (line, reg0000) => {
       g310: ln[3],
       g311: ln[4],
       g312: ln[5],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -589,7 +622,8 @@ const reg1980 = (line, reg0000) => {
       g410: ln[12],
       g411: ln[13],
       g412: ln[14],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -600,7 +634,8 @@ const reg1990 = (line, reg0000) => {
     return {
       reg: ln[1],
       qtdLin1: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -640,5 +675,5 @@ module.exports = {
   reg1970,
   reg1975,
   reg1980,
-  reg1990,
+  reg1990
 };

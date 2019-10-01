@@ -17,7 +17,7 @@ const RegSchema = new mongoose.Schema({
     type: String
   },
   qtd: {
-    type: String,
+    type: Number,
     required: true
   },
   unid: {
@@ -25,7 +25,7 @@ const RegSchema = new mongoose.Schema({
     required: true
   },
   vlItem: {
-    type: String,
+    type: Number,
     required: true
   },
   vlDesc: {
@@ -123,6 +123,10 @@ const RegSchema = new mongoose.Schema({
   },
   vlAbatNt: {
     type: String
+  },
+  flag: {
+    type: String,
+    required: true
   },
   regC100: {
     type: Object,

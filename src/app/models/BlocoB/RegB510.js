@@ -1,34 +1,38 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   indProf: {
     type: String,
-    required: true,
+    required: true
   },
   indEsc: {
     type: String,
-    required: true,
+    required: true
   },
   indSoc: {
     type: String,
-    required: true,
+    required: true
   },
   cpf: {
     type: String,
-    required: true,
+    required: true
   },
   nome: {
     type: String,
-    required: true,
+    required: true
+  },
+  flag: {
+    type: String,
+    required: true
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
-})
+    required: true
+  }
+});
 
-module.exports = mongoose.model('regB510', RegSchema)
+module.exports = mongoose.model("regB510", RegSchema);

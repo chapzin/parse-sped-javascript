@@ -41,6 +41,10 @@ const RegSchema = new mongoose.Schema({
   vlItemIr: {
     type: String
   },
+  flag: {
+    type: String,
+    required: true
+  },
   reg0000: {
     type: Object,
     required: true

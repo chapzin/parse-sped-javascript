@@ -3,48 +3,52 @@ const mongoose = require("mongoose");
 const RegSchema = new mongoose.Schema({
   reg: {
     type: String,
-    required: true,
+    required: true
   },
   dtIni: {
     type: String,
-    required: true,
+    required: true
   },
   dtFin: {
     type: String,
-    required: true,
+    required: true
   },
   saldoInIcms: {
     type: String,
-    required: true,
+    required: true
   },
   somParc: {
     type: String,
-    required: true,
+    required: true
   },
   vlTribExp: {
     type: String,
-    required: true,
+    required: true
   },
   vlTotal: {
     type: String,
-    required: true,
+    required: true
   },
   indPerSai: {
     type: String,
-    required: true,
+    required: true
   },
   icmsAprop: {
     type: String,
-    required: true,
+    required: true
   },
   somIcmsOc: {
     type: String,
-    required: true,
+    required: true
+  },
+  flag: {
+    type: String,
+    required: true
   },
   reg0000: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 });
 
 module.exports = mongoose.model("regG110", RegSchema);

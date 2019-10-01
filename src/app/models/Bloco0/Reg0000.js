@@ -55,6 +55,10 @@ const RegSchema = new mongoose.Schema({
   indAtiv: {
     type: Number,
     required: true
+  },
+  flag: {
+    type: String,
+    required: true
   }
 });
 

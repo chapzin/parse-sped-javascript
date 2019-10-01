@@ -4,7 +4,8 @@ const regG001 = (line, reg0000) => {
     return {
       reg: ln[1],
       indMov: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -23,7 +24,8 @@ const regG110 = (line, reg0000) => {
       indPerSai: ln[8],
       icmsAprop: ln[9],
       somIcmsOc: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -42,7 +44,8 @@ const regG125 = (line, reg0000) => {
       vlImobIcmsDif: ln[8],
       numParc: ln[9],
       vlParcPass: ln[10],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -60,7 +63,8 @@ const regG126 = (line, reg0000) => {
       vlTotal: ln[7],
       indPerSai: ln[8],
       vlParcAprop: ln[9],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -77,7 +81,8 @@ const regG130 = (line, reg0000) => {
       numDoc: ln[6],
       chvNfeCte: ln[7],
       dtDoc: ln[8],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -89,7 +94,8 @@ const regG140 = (line, reg0000) => {
       reg: ln[1],
       numItem: ln[2],
       codItem: ln[3],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
@@ -100,7 +106,8 @@ const regG990 = (line, reg0000) => {
     return {
       reg: ln[1],
       qtdLinG: ln[2],
-      reg0000,
+      flag: "sped",
+      reg0000
     };
   }
 };
