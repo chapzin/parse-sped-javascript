@@ -35,10 +35,10 @@ const RegSchema = new mongoose.Schema({
     type: String
   },
   dtDoc: {
-    type: String
+    type: Date
   },
   dtES: {
-    type: String
+    type: Date
   },
   vlDoc: {
     type: Number
@@ -47,60 +47,59 @@ const RegSchema = new mongoose.Schema({
     type: String
   },
   vlDesc: {
-    type: String
+    type: Number
   },
   vlAbatNt: {
-    type: String
+    type: Number
   },
   vlMerc: {
-    type: String
+    type: Number
   },
   indFrt: {
     type: String
   },
   vlFrt: {
-    type: String
+    type: Number
   },
   vlSeg: {
-    type: String
+    type: Number
   },
   vlOutDa: {
-    type: String
+    type: Number
   },
   vlBcIcms: {
-    type: String
+    type: Number
   },
   vlIcms: {
-    type: String
+    type: Number
   },
   vlBcIcmsSt: {
-    type: String
+    type: Number
   },
   vlIcmsSt: {
-    type: String
+    type: Number
   },
   vlIpi: {
-    type: String
+    type: Number
   },
   vlPis: {
-    type: String
+    type: Number
   },
   vlCofins: {
-    type: String
+    type: Number
   },
   vlPisSt: {
-    type: String
+    type: Number
   },
   vlCofinsSt: {
-    type: String
+    type: Number
   },
   flag: {
     type: String,
     required: true
   },
   reg0000: {
-    type: Object,
-    required: true
+    type: Object
   }
 });
 

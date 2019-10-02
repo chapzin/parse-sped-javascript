@@ -29,7 +29,7 @@ const RegSchema = new mongoose.Schema({
     required: true
   },
   vlDesc: {
-    type: String
+    type: Number
   },
   indMov: {
     type: String,
@@ -47,22 +47,22 @@ const RegSchema = new mongoose.Schema({
     type: String
   },
   vlBcIcms: {
-    type: String
+    type: Number
   },
   aliqIcms: {
-    type: String
+    type: Number
   },
   vlIcms: {
-    type: String
+    type: Number
   },
   vlBcIcmsSt: {
-    type: String
+    type: Number
   },
   aliqSt: {
-    type: String
+    type: Number
   },
   vlIcmsSt: {
-    type: String
+    type: Number
   },
   indApur: {
     type: String
@@ -74,55 +74,55 @@ const RegSchema = new mongoose.Schema({
     type: String
   },
   vlBcIpi: {
-    type: String
+    type: Number
   },
   aliqIpi: {
-    type: String
+    type: Number
   },
   vlIpi: {
-    type: String
+    type: Number
   },
   cstPis: {
     type: String
   },
   vlBcPis: {
-    type: String
+    type: Number
   },
   aliqPis: {
-    type: String
+    type: Number
   },
   quantBcPis: {
-    type: String
+    type: Number
   },
   aliqPis2: {
-    type: String
+    type: Number
   },
   vlPis: {
-    type: String
+    type: Number
   },
   cstCofins: {
     type: String
   },
   vlBcCofins: {
-    type: String
+    type: Number
   },
   aliqCofins: {
-    type: String
+    type: Number
   },
   quantBcCofins: {
-    type: String
+    type: Number
   },
   aliqCofins2: {
-    type: String
+    type: Number
   },
   vlCofins: {
-    type: String
+    type: Number
   },
   codCta: {
     type: String
   },
   vlAbatNt: {
-    type: String
+    type: Number
   },
   flag: {
     type: String,

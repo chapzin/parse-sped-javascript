@@ -31,7 +31,7 @@ const readSped = file => {
   let r0000 = {};
   let reg0200p = {};
   let regC100p = {};
-  const sped = new LineByLineReader(path.resolve("uploads", file));
+  const sped = new LineByLineReader(path.resolve("uploads", "speds", file));
   const database = uri => {
     mongoose.connect(uri, {
       useCreateIndex: true,
@@ -146,7 +146,7 @@ const readSped = file => {
   });
 };
 
-const files = fs.readdirSync(path.resolve("uploads"));
+const files = fs.readdirSync(path.resolve("uploads", "speds"));
 
 files.forEach(file => {
   readSped(file);

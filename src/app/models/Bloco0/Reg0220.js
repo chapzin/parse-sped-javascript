@@ -10,7 +10,7 @@ const RegSchema = new mongoose.Schema({
     required: true
   },
   fatConv: {
-    type: String,
+    type: Number,
     required: true
   },
   codItem: {

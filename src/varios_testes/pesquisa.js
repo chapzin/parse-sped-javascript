@@ -10,18 +10,56 @@ const database = uri => {
 };
 database(mongodb.uri);
 
-RegC170Model.aggregate([
-  {
-    $match: {}
-  },
-  {
-    $group: {
-      _id: "$codItem",
-      QtdTotal: { $sum: "$qtd" },
-      VlTotal: { $sum: "$vlItem" },
-      QtdItens: { $sum: 1 }
+const totalizadorC170PorCfopSped = () => {
+  return RegC170Model.aggregate([
+    {
+      $match: { flag: "sped" }
+    },
+    {
+      $group: {
+        _id: "$cfop",
+        QtdTotal: { $sum: "$qtd" },
+        VlTotal: { $sum: "$vlItem" },
+        QtdItens: { $sum: 1 }
+      }
     }
-  }
-])
-  .then(res => console.log(res))
-  .catch(err => console.log(err));
+  ])
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+};
+
+const totalizadorItensPorCfopSped = cfop => {
+  return RegC170Model.aggregate([
+    {
+      $match: { flag: "sped", cfop: cfop }
+    },
+    {
+      $group: {
+        _id: "$codItem",
+        QtdTotal: { $sum: "$qtd" },
+        VlTotal: { $sum: "$vlItem" },
+        QtdItens: { $sum: 1 }
+      }
+    }
+  ])
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+};
+
+// RegC170Model.aggregate([
+//   {
+//     $match: {}
+//   },
+//   {
+//     $group: {
+//       _id: "$cfop",
+//       QtdTotal: { $sum: "$qtd" },
+//       VlTotal: { $sum: "$vlItem" },
+//       QtdItens: { $sum: 1 }
+//     }
+//   }
+// ])
+//   .then(res => console.log(res))
+//   .catch(err => console.log(err));
+// totalizadorC170PorCfopSped();
+totalizadorItensPorCfopSped("1117");
