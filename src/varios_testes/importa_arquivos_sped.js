@@ -8,7 +8,7 @@ const {
   reg0200,
   reg0220
 } = require("../app/blocos/bloco0");
-const { regC100, regC170 } = require("../app/blocos/blocoC");
+const { regC100Sped, regC170 } = require("../app/blocos/blocoC");
 const { regH010 } = require("../app/blocos/blocoH");
 const { reg9999 } = require("../app/blocos/bloco9");
 const path = require("path");
@@ -105,9 +105,9 @@ const readSped = file => {
       });
     }
 
-    if (regC100(line, r0000)) {
-      regC100p = regC100(line, r0000);
-      RegC100Model.create(regC100(line, r0000), (err, result) => {
+    if (regC100Sped(line, r0000)) {
+      regC100p = regC100Sped(line, r0000);
+      RegC100Model.create(regC100Sped(line, r0000), (err, result) => {
         if (err) {
           console.log(err);
         } else {

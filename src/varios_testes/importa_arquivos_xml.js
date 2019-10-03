@@ -1,32 +1,39 @@
 const fs = require("fs");
 const path = require("path");
-const NFe = require("djf-nfe");
-const RegC100 = require("../app/models/classes/ClassRegC100");
+
+const RegC100Model = require("../app/models/BlocoC/RegC100");
+const RegC170Model = require("../app/models/BlocoC/RegC170");
+const { regC100Xml, regC170Xml } = require("../app/blocos/blocoC");
+const mongoose = require("mongoose");
+const { mongodb } = require("../config/database");
+const database = uri => {
+  mongoose.connect(uri, {
+    useCreateIndex: true,
+    useNewUrlParser: true
+  });
+};
+database(mongodb.uri);
 
 const files = fs.readdirSync(path.resolve("uploads", "xmls"));
 
-const lerXml = file => {
-  return fs.readFileSync(path.resolve("uploads", "xmls", file), "utf-8");
-};
-
-let regC100 = new RegC100((reg = "C100"));
-
 files.forEach(file => {
-  let nfe = NFe(lerXml(file).toString());
-  let info = nfe.identificacaoNFe();
-  let emitente = nfe.emitente();
-  let protocolo = nfe.informacoesProtocolo();
-  let regC100 = new RegC100(
-    (reg = "C100"),
-    (indOper = info.tipoOperacao()),
-    (indEmit = info.dataEmissao()),
-    (codPart = emitente.cpf() || emitente.cnpj()),
-    (codMod = "55"),
-    (codSit = "00"),
-    (ser = info.serie()),
-    (numDoc = info.nrNota()),
-    (chvNfe = protocolo.chave() || "nfe sem protocolo")
-  );
-  // console.log(lerXml(file).toString());
-  console.log(regC100);
+  let regC100 = regC100Xml(file);
+  RegC100Model.create(regC100, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(`Inseriu ${regC100.chvNfe}`);
+    }
+  });
+
+  let regC170 = regC170Xml(file);
+  regC170.forEach(itemRegC170 => {
+    RegC170Model.create(itemRegC170, (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(`Inseriu ${regC100.chvNfe}`);
+      }
+    });
+  });
 });

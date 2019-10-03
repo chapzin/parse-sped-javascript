@@ -4,6 +4,7 @@ class RegC100 {
     indOper,
     indEmit,
     codPart,
+    codDest,
     codMod,
     codSit,
     ser,
@@ -35,6 +36,7 @@ class RegC100 {
     this.indOper = indOper;
     this.indEmit = indEmit;
     this.codPart = codPart;
+    this.codDest = codDest;
     this.codMod = codMod;
     this.codSit = codSit;
     this.ser = ser;

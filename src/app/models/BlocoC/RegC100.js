@@ -16,6 +16,9 @@ const RegSchema = new mongoose.Schema({
   codPart: {
     type: String
   },
+  codDest: {
+    type: String
+  },
   codMod: {
     type: String,
     required: true

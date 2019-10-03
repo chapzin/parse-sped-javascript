@@ -133,8 +133,7 @@ const RegSchema = new mongoose.Schema({
     required: true
   },
   reg0000: {
-    type: Object,
-    required: true
+    type: Object
   }
 });
 

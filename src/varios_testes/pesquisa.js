@@ -28,6 +28,24 @@ const totalizadorC170PorCfopSped = () => {
     .catch(err => console.log(err));
 };
 
+const totalizadorC170PorCfop = () => {
+  return RegC170Model.aggregate([
+    {
+      $match: {}
+    },
+    {
+      $group: {
+        _id: "$cfop",
+        QtdTotal: { $sum: "$qtd" },
+        VlTotal: { $sum: "$vlItem" },
+        QtdItens: { $sum: 1 }
+      }
+    }
+  ])
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+};
+
 const totalizadorItensPorCfopSped = cfop => {
   return RegC170Model.aggregate([
     {
@@ -61,5 +79,5 @@ const totalizadorItensPorCfopSped = cfop => {
 // ])
 //   .then(res => console.log(res))
 //   .catch(err => console.log(err));
-// totalizadorC170PorCfopSped();
-totalizadorItensPorCfopSped("1117");
+totalizadorC170PorCfop();
+// totalizadorItensPorCfopSped("1117");

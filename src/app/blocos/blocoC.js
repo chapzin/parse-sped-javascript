@@ -2,6 +2,10 @@ const {
   convertToFloat,
   convertStringToDateSped
 } = require("../util/conversores");
+const NFe = require("djf-nfe");
+const { lerXml } = require("../util/utilidades");
+const RegC100 = require("../models/classes/ClassRegC100");
+const RegC170 = require("../models/classes/ClassRegC170");
 
 const regC001 = (line, reg0000) => {
   const ln = line.split("|");
@@ -15,7 +19,50 @@ const regC001 = (line, reg0000) => {
   }
 };
 
-const regC100 = (line, reg0000) => {
+const regC100Xml = file => {
+  let nfe = NFe(lerXml(file).toString());
+  let info = nfe.identificacaoNFe();
+  let emitente = nfe.emitente();
+  let destinatario = nfe.destinatario();
+  let protocolo = nfe.informacoesProtocolo();
+  let total = nfe.total();
+  let regC100 = new RegC100(
+    (reg = "C100"),
+    (indOper = info.tipoOperacao()),
+    (indEmit = info.dataEmissao()),
+    (codPart = emitente.cpf() || emitente.cnpj()),
+    (codDest = destinatario.cpf() || destinatario.cnpj()),
+    (codMod = "55"),
+    (codSit = "00"),
+    (ser = info.serie()),
+    (numDoc = info.nrNota()),
+    (chvNfe = protocolo.chave() || "nfe sem protocolo"),
+    (dtDoc = info.dataEmissao()),
+    (dtES = info.dataEmissao()),
+    (vlDoc = total.valorNota()),
+    (indPgto = "0"),
+    (vlDesc = total.valorDesconto()),
+    (vlAbatNt = 0),
+    (vlMerc = total.valorProdutos()),
+    (indFrt = "0"),
+    (vlFrt = total.valorFrete()),
+    (vlSeg = total.valorSeguro()),
+    (vlOutDa = total.valorOutrasDespesas()),
+    (vlBcIcms = total.baseCalculoIcms()),
+    (vlIcms = total.valorIcms()),
+    (vlBcIcmsSt = total.baseCalculoIcmsST()),
+    (vlIcmsSt = total.valorIcmsST()),
+    (vlIpi = total.valorIPI()),
+    (vlPis = total.valorPIS()),
+    (vlCofins = total.valorCOFINS()),
+    (vlPisSt = "0.00"),
+    (vlCofinsSt = "0.00"),
+    (flag = "xml")
+  );
+  return regC100;
+};
+
+const regC100Sped = (line, reg0000) => {
   const ln = line.split("|");
   if (line[0] == "|" && ln[1] == "C100") {
     return {
@@ -300,6 +347,82 @@ const regC165 = (line, reg0000) => {
       reg0000
     };
   }
+};
+
+const regC170Xml = file => {
+  const regsC170 = [];
+  const nfe = NFe(lerXml(file).toString());
+  const info = nfe.identificacaoNFe();
+  const emitente = nfe.emitente();
+  const destinatario = nfe.destinatario();
+  const protocolo = nfe.informacoesProtocolo();
+  const total = nfe.total();
+  const regC100xmlok = regC100Xml(file);
+  const totalItens = nfe.nrItens();
+
+  for (let i = 1; i <= totalItens; i++) {
+    let item = nfe.item(i);
+    let icms = item.imposto().icms();
+    let ipi = item.imposto().ipi();
+    let pis = item.imposto().pis();
+
+    let _cstIpi = "";
+    let _aliqIpi = "";
+    let _vlIpi = "";
+    let _BcIpi = "";
+
+    if (item.imposto().ipi()) {
+      _cstIpi = ipi.cst();
+      _aliqIpi = ipi.porcentagemIPI();
+      _vlIpi = ipi.valorIPI();
+      _BcIpi = ipi.baseCalculo();
+    }
+
+    let cofins = item.imposto().cofins();
+    const regC170 = new RegC170(
+      (reg = "C170"),
+      (numItem = i),
+      (codItem = item.codigo()),
+      (descrCompl = item.descricao()),
+      (qtd = item.quantidadeComercial()),
+      (unid = item.unidadeComercial()),
+      (vlItem = item.valorUnitario() * qtd),
+      (vlDesc = item.valorDesconto()),
+      (indMov = "0"),
+      (cstIcms = `${icms.origem()}${icms.cst()}`),
+      (cfop = item.cfop()),
+      (codNat = ""),
+      (vlBcIcms = icms.baseCalculo()),
+      (aliqIcms = icms.porcetagemIcms()),
+      (vlIcms = icms.valorIcms()),
+      (vlBcIcmsSt = icms.baseCalculoIcmsST()),
+      (aliqSt = icms.porcetagemIcmsST()),
+      (vlIcmsSt = icms.valorIcmsST()),
+      (indApur = ""),
+      (cstIpi = _cstIpi),
+      (codEnq = ""),
+      (vlBcIpi = _BcIpi),
+      (aliIpi = _aliqIpi),
+      (vlIpi = _vlIpi),
+      (cstPis = pis.cst()),
+      (vlBcPis = pis.baseCalculo()),
+      (aliqPis = pis.porcentagemPIS()),
+      (quantBcPis = ""),
+      (aliqPis2 = ""),
+      (vlPis = pis.valorPIS()),
+      (cstCofins = cofins.cst()),
+      (vlBcCofins = cofins.baseCalculo()),
+      (aliCofins = cofins.porcentagemCOFINS()),
+      (quantBcCofins = ""),
+      (aliCofins2 = ""),
+      (vlCofins = cofins.valorCOFINS()),
+      (codCta = ""),
+      (flag = "xml"),
+      (regC100 = regC100xmlok)
+    );
+    regsC170.push(regC170);
+  }
+  return regsC170;
 };
 
 const regC170 = (line, regC100, reg0000) => {
@@ -1189,7 +1312,8 @@ const regC990 = (line, reg0000) => {
 
 module.exports = {
   regC001,
-  regC100,
+  regC100Sped,
+  regC100Xml,
   regC101,
   regC105,
   regC110,
@@ -1206,6 +1330,7 @@ module.exports = {
   regC160,
   regC165,
   regC170,
+  regC170Xml,
   regC171,
   regC172,
   regC173,
