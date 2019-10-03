@@ -19,17 +19,21 @@ const regC001 = (line, reg0000) => {
   }
 };
 
-const regC100Xml = file => {
+const regC100Xml = (file, cnpj) => {
   let nfe = NFe(lerXml(file).toString());
   let info = nfe.identificacaoNFe();
   let emitente = nfe.emitente();
   let destinatario = nfe.destinatario();
   let protocolo = nfe.informacoesProtocolo();
   let total = nfe.total();
+  var _indOper = 1;
+  if (cnpj === emitente.cpf || cnpj === emitente.cnpj()) {
+    _indOper = 0;
+  }
   let regC100 = new RegC100(
     (reg = "C100"),
     (indOper = info.tipoOperacao()),
-    (indEmit = info.dataEmissao()),
+    (indEmit = _indOper),
     (codPart = emitente.cpf() || emitente.cnpj()),
     (codDest = destinatario.cpf() || destinatario.cnpj()),
     (codMod = "55"),
@@ -349,7 +353,7 @@ const regC165 = (line, reg0000) => {
   }
 };
 
-const regC170Xml = file => {
+const regC170Xml = (file, cnpj) => {
   const regsC170 = [];
   const nfe = NFe(lerXml(file).toString());
   const info = nfe.identificacaoNFe();
@@ -357,7 +361,7 @@ const regC170Xml = file => {
   const destinatario = nfe.destinatario();
   const protocolo = nfe.informacoesProtocolo();
   const total = nfe.total();
-  const regC100xmlok = regC100Xml(file);
+  const regC100xmlok = regC100Xml(file, cnpj);
   const totalItens = nfe.nrItens();
 
   for (let i = 1; i <= totalItens; i++) {

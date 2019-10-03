@@ -17,7 +17,7 @@ database(mongodb.uri);
 const files = fs.readdirSync(path.resolve("uploads", "xmls"));
 
 files.forEach(file => {
-  let regC100 = regC100Xml(file);
+  let regC100 = regC100Xml(file, "07202427000898");
   RegC100Model.create(regC100, (err, result) => {
     if (err) {
       console.log(err);
@@ -26,7 +26,7 @@ files.forEach(file => {
     }
   });
 
-  let regC170 = regC170Xml(file);
+  let regC170 = regC170Xml(file, "07202427000898");
   regC170.forEach(itemRegC170 => {
     RegC170Model.create(itemRegC170, (err, result) => {
       if (err) {
