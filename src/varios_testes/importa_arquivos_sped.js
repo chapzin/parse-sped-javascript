@@ -8,7 +8,15 @@ const {
   reg0200,
   reg0220
 } = require("../app/blocos/bloco0");
-const { regC100Sped, regC170 } = require("../app/blocos/blocoC");
+const {
+  regC100Sped,
+  regC170,
+  regC400,
+  regC405,
+  regC410,
+  regC420,
+  regC425
+} = require("../app/blocos/blocoC");
 const { regH010 } = require("../app/blocos/blocoH");
 const { reg9999 } = require("../app/blocos/bloco9");
 const path = require("path");
@@ -22,6 +30,11 @@ const Reg0200Model = require("../app/models/Bloco0/Reg0200");
 const Reg0220Model = require("../app/models/Bloco0/Reg0220");
 const RegC100Model = require("../app/models/BlocoC/RegC100");
 const RegC170Model = require("../app/models/BlocoC/RegC170");
+const RegC400Model = require("../app/models/BlocoC/RegC400");
+const RegC405Model = require("../app/models/BlocoC/RegC405");
+const RegC410Model = require("../app/models/BlocoC/RegC410");
+const RegC420Model = require("../app/models/BlocoC/RegC420");
+const RegC425Model = require("../app/models/BlocoC/RegC425");
 const RegH010Model = require("../app/models/BlocoH/RegH010");
 const LineByLineReader = require("line-by-line");
 const { mongodb } = require("../config/database");
@@ -123,6 +136,52 @@ const readSped = file => {
         }
       });
     }
+
+    if (regC400(line, r0000)) {
+      RegC400Model.create(regC400(line, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
+    if (regC405(line, r0000)) {
+      RegC405Model.create(regC405(line, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
+    if (regC410(line, r0000)) {
+      RegC410Model.create(regC410(line, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
+    if (regC420(line, r0000)) {
+      RegC420Model.create(regC420(line, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
+    if (regC425(line, r0000)) {
+      RegC425Model.create(regC425(line, r0000), (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+    }
+
     if (regH010(line, r0000)) {
       RegH010Model.create(regH010(line, r0000), (err, result) => {
         if (err) {

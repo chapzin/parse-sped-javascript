@@ -6,7 +6,7 @@ const RegSchema = new mongoose.Schema({
     required: true
   },
   dtDoc: {
-    type: String,
+    type: Date,
     required: true
   },
   cro: {
@@ -17,16 +17,16 @@ const RegSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  numcooFin: {
+  numCooFin: {
     type: String,
     required: true
   },
   gtFin: {
-    type: String,
+    type: Number,
     required: true
   },
   vlBrt: {
-    type: String,
+    type: Number,
     required: true
   },
   flag: {
