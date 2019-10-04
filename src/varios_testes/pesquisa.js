@@ -75,21 +75,37 @@ const consultaChaveTerceiroSped = async () => {
   return await RegC100Model.find(
     { flag: "sped", indEmit: "1", codMod: "55" },
     { chvNfe: 1, _id: 0 }
-  );
+  ).count();
+};
+
+const consultaChaveTerceiroXml = async () => {
+  return await RegC100Model.find(
+    { flag: "xml", indEmit: "1", codMod: "55" },
+    { chvNfe: 1, _id: 0 }
+  ).count();
 };
 
 const consultaChavePropriaSped = async () => {
   return await RegC100Model.find(
     { flag: "sped", indEmit: "0", codSit: "00", codMod: "55" },
-    { chvNfe: 1, _id: 0 }
-  ).count();
+    { chvNfe: 1, dtDoc: 1, _id: 0 }
+  );
 };
 
 const consultaChavePropriaXml = async () => {
   return await RegC100Model.find(
     { flag: "xml", indEmit: "0", codMod: "55" },
     { chvNfe: 1, _id: 0 }
-  ).count();
+  );
+};
+
+const contains = (conteudo, valor) => {
+  for (let i = 0; i < conteudo.length; i++) {
+    if (conteudo[i].chvNfe === valor.chvNfe) {
+      return true;
+    }
+  }
+  return false;
 };
 
 // RegC170Model.aggregate([
@@ -109,7 +125,14 @@ const consultaChavePropriaXml = async () => {
 //   .catch(err => console.log(err));
 // totalizadorC170PorCfop();
 // totalizadorItensPorCfopSped("1117");
-const xml = [];
-const sped = [];
-consultaChavePropriaXml().then(res => xml.push(res));
-consultaChavePropriaSped().then(res => sped.push(res));
+
+const main = async () => {
+  const xml = await consultaChavePropriaXml();
+  const sped = await consultaChavePropriaSped();
+  const result = sped.filter(res => !contains(xml, res));
+  console.log(xml.length);
+  console.log(sped.length);
+  console.log(result);
+};
+
+main();
