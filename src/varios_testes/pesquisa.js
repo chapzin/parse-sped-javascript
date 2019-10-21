@@ -65,6 +65,24 @@ const totalizadorItensPorCfopSped = cfop => {
     .catch(err => console.log(err));
 };
 
+const totalizadorItensPorCfopXml = codigo => {
+  return RegC170Model.aggregate([
+    {
+      $match: { flag: "xml", codItem: codigo }
+    },
+    {
+      $group: {
+        _id: "$cfop",
+        QtdTotal: { $sum: "$qtd" },
+        VlTotal: { $sum: "$vlItem" },
+        QtdItens: { $sum: 1 }
+      }
+    }
+  ])
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+};
+
 const consultaNf1 = () => {
   return RegC100Model.find({ codMod: "01" })
     .then(res => console.log(res))
@@ -127,12 +145,12 @@ const contains = (conteudo, valor) => {
 // totalizadorItensPorCfopSped("1117");
 
 const main = async () => {
-  const xml = await consultaChavePropriaXml();
-  const sped = await consultaChavePropriaSped();
-  const result = sped.filter(res => !contains(xml, res));
-  console.log(xml.length);
-  console.log(sped.length);
-  console.log(result);
+  const xml = await totalizadorItensPorCfopXml('25189I');
+  // const sped = await consultaChavePropriaSped();
+  // const result = sped.filter(res => !contains(xml, res));
+  console.log(xml);
+  // console.log(sped.length);
+  // console.log(result);
 };
 
 main();
