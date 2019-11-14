@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const RegC170Model = require("../app/models/BlocoC/RegC170");
 const RegC100Model = require("../app/models/BlocoC/RegC100");
+const RegH100Model = require('../app/models/BlocoH/RegH010');
 const { mongodb } = require("../config/database");
 
 const database = uri => {
@@ -83,10 +84,8 @@ const totalizadorItensPorCfopXml = codigo => {
     .catch(err => console.log(err));
 };
 
-const consultaNf1 = () => {
-  return RegC100Model.find({ codMod: "01" })
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
+const consultaNf1 = async () => {
+  return await RegC100Model.find({ codMod: "01" })
 };
 
 const consultaChaveTerceiroSped = async () => {
@@ -117,6 +116,12 @@ const consultaChavePropriaXml = async () => {
   );
 };
 
+const consultaInventario = async () => {
+  return await RegH100Model.find(
+    { flag: "sped", "reg0000.dtIni": { $gte: new Date(2017, 01, 01), $lt: new Date(2017, 03, 01) } }
+  )
+}
+
 const contains = (conteudo, valor) => {
   for (let i = 0; i < conteudo.length; i++) {
     if (conteudo[i].chvNfe === valor.chvNfe) {
@@ -145,10 +150,14 @@ const contains = (conteudo, valor) => {
 // totalizadorItensPorCfopSped("1117");
 
 const main = async () => {
-  const xml = await totalizadorItensPorCfopXml('25189I');
-  // const sped = await consultaChavePropriaSped();
+  // const xml = await totalizadorItensPorCfopXml('25189I');
+  const sped = await consultaInventario();
+
+  sped.map((nfe) => {
+    console.log(`${nfe.codItem};${nfe.qtd}`)
+  })
   // const result = sped.filter(res => !contains(xml, res));
-  console.log(xml);
+  // console.log(sped);
   // console.log(sped.length);
   // console.log(result);
 };
