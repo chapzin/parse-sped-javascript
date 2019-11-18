@@ -1,6 +1,6 @@
-const { gql } = require('apollo-server-express')
-const Reg0000Mongo = require('../models/Reg0000')
-const RegC100Mongo = require('../models/RegC100')
+const { gql } = require("apollo-server-express");
+const Reg0000Mongo = require("../models/Bloco0/Reg0000");
+const RegC100Mongo = require("../models/BlocoC/RegC100");
 
 const typeDefs = gql`
   type Query {
@@ -60,21 +60,21 @@ const typeDefs = gql`
     vlCofinsSt: String
     reg0000: Reg0000
   }
-`
+`;
 const resolvers = {
   Query: {
     getAllReg0000: () => Reg0000Mongo.find(),
     getAllRegC100: (_, { codSit }) => {
       if (!codSit) {
         return RegC100Mongo.find()
-          .where('chvNfe')
-          .ne('')
+          .where("chvNfe")
+          .ne("");
       }
       return RegC100Mongo.find({ codSit: codSit })
-        .where('chvNfe')
-        .ne('')
-    },
-  },
-}
+        .where("chvNfe")
+        .ne("");
+    }
+  }
+};
 
-module.exports = { typeDefs, resolvers }
+module.exports = { typeDefs, resolvers };
